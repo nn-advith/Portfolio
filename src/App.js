@@ -48,7 +48,7 @@ const App = () => {
 
   return (
   <>
-    <NavLogo to='/' onClick={toggleHome}>NNA</NavLogo>
+    <NavLogo  to='/' onClick={toggleHome}>NNA</NavLogo>
     <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
     <HamIcon2 toggle={toggle} isOpen={isOpen}/>
     <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />

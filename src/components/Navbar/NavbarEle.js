@@ -28,7 +28,7 @@ export const Nav = styled.nav`
     z-index: 100;
     animation: ${fadeIn} 1s;
     transition: all 0.3s ease-in-out;
-    filter: ${({isOpen}) => (isOpen ? 'blur(20px)': 'blur(0px)')};
+    filter: ${({isOpen}) => (isOpen ? 'grayscale(100%)': 'graysacle(0%)')};
     
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
@@ -49,7 +49,7 @@ export const NavbarContainer = styled.div`
 export const NavLogo = styled.div`
     color: black;
     position: absolute;
-    transform: translate(10%, 35%);
+    transform:translate(10%, 35%);
     ${'' /* justify-self: flex-start; */}
     cursor: pointer;
     font-size: 2rem;
@@ -60,6 +60,12 @@ export const NavLogo = styled.div`
     font-weight: bold;
     letter-spacing: 5px;
     z-index: 101;
+    transition: 0.3s  ease-in-out;
+    @media screen and (max-width: 768px){
+        transform: translate(10%, 50%);
+        font-size: 1.2rem;
+        transition: 0.3s  ease-in-out;
+    }
 `
 
 
@@ -72,6 +78,7 @@ export const NavMenu = styled.ul`
     justify-self: flex-end;
     @media screen and (max-width: 768px) {
         display: none;
+        transition: 0.3s ease-in-out;
     }
 `
 

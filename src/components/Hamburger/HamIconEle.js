@@ -21,33 +21,36 @@ export const HamIcon = styled.div`
     position: absolute;
     animation: ${fadeIn} 0.5s;
     display: flex;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     flex-direction: column;
     top: 0;
     right: 0;
-    width: 60px;
-    height: 35px;
+    width: 40px;
+    height: 20px;
     cursor: pointer;
     transition: all .1s ease-in-out;
-    transform: translate(-30%, 60%);
+    transform: translate(-30%, 100%);
     z-index: 1001;
 
     div {
-        width: 55%;
-        height: 0.25rem;
+        width: 60%;
+        height: 0.2rem;
         background: #000;
         transition: all .1s ease-in-out;
         transform-origin: 0px;
           
     &:nth-child(1) {
+    
        transform: ${({isOpen}) => (isOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
         }
     &:nth-child(2) {
+
     opacity: ${({isOpen}) => (isOpen ? '0%' : '100%')};
        transform: ${({isOpen}) => (isOpen ? 'translateX(100%)' : 'translateX(0)')};
         }
     &:nth-child(3) {
+
        transform: ${({isOpen}) => (isOpen ? 'rotate(-45deg)' : 'rotate(0deg)')};
         }
     }

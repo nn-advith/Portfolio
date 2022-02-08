@@ -5,10 +5,10 @@ import { Link as LinkS } from 'react-scroll';
 export const SidebarLine = styled.div`
     background: #000;
     position: fixed;
-    top: ${({isOpen})=> (isOpen ? '15%': '100%')};
+    top: ${({isOpen})=> (isOpen ? '10%': '100%')};
     opacity: ${({isOpen})=> (isOpen ? '1': '0')};
-    left: 9%;
-    width: 5px;
+    left: 10%;
+    width: 3.5px;
     height: 100%; 
     z-index: 100;
     transition: 0.3s ease-in-out;
@@ -19,7 +19,7 @@ export const SidebarLine = styled.div`
 export const SidebarContainer = styled.aside`
     position: fixed;
     z-index: 99;
-    width: 45%;
+    width: 70%;
     height:100%;
     background: #fff;
     filter: brightness(0.9);
@@ -37,7 +37,7 @@ export const SidebarContainer = styled.aside`
 
 export const SidebarWrapper = styled.div`
     color: #fff;
-    margin-top: 100px;
+    margin-top: 150px;
 `
 
 export const SidebarMenu = styled.ul`
@@ -55,7 +55,7 @@ export const SidebarLink = styled(LinkS)`
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
