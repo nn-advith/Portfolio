@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import { FaBars } from 'react-icons/fa'
-import { animateScroll as scroll } from 'react-scroll';
+import React from 'react';
+
 import { 
     Nav,
     NavLogo,
@@ -8,25 +7,15 @@ import {
     NavItem,
     NavMenu,
     NavLink,
-    HamIcon,
+
 } from './NavbarEle';
 
 const Navbar = ({isOpen,toggle, setSection}) => {
-
-    // window.addEventListener('scroll', console.log(window.pageYOffset));
-    const toggleHome = () =>{
-        scroll.scrollToTop()
-    }
-
+    
     return (
     <>
-
         <Nav isOpen={isOpen}>
-        
-        <NavbarContainer >
-
-        {/* <NavLogo to='/' onClick={toggleHome}>NNA</NavLogo>    */}
-       
+        <NavbarContainer >       
         <NavMenu>
             <NavItem>
                 <NavLink slash='true' onClick={() => {setSection(1);}}>About</NavLink>

@@ -6,20 +6,9 @@
    
 }
 
-.noscroll {
-  overflow: hidden;
-  overflow-x: hidden;
-}
-
-.scrollallow {
-  overflow: scroll;
-  overflow-x: hidden;
-}
-
-/* 
-html{
+#root{
   height: 100vh;
-} */
+}
 
 ::-webkit-scrollbar {
   width:0;  
@@ -34,13 +23,18 @@ html{
   top:0;
   left:0;
   background-color: transparent;
-
 }
 
 
 
-#root{
-  height: 100vh;
+.noscroll {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.scrollallow {
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .text{
@@ -49,4 +43,6 @@ html{
   align-items: center;
   margin-left: 50%;
 }
+
+
 

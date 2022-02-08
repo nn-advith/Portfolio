@@ -11,7 +11,6 @@ const fadeIn =  keyframes`
     100% {
         opacity: 1;
         margin-top:0;
-
     }
 
 `
@@ -43,8 +42,7 @@ export const NavbarContainer = styled.div`
     z-index: 1;
     width: 100%;
     padding: 0 24px;
-    max-width: 100%;
-  
+    max-width: 100%; 
 `
 
 
@@ -62,7 +60,6 @@ export const NavLogo = styled.div`
     font-weight: bold;
     letter-spacing: 5px;
     z-index: 101;
-
 `
 
 
@@ -79,9 +76,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.div`
-   height: 80px;
-
-   
+   height: 80px;  
 `
 
 export const NavLink = styled(LinkS)`

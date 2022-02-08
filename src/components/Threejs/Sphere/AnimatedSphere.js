@@ -1,18 +1,17 @@
 import React, {useState, useRef, useEffect} from "react";
-
 import { useFrame} from '@react-three/fiber';
 import {Sphere, MeshDistortMaterial} from "@react-three/drei";
 import * as THREE from 'three';
 
 
 
-function AnimatedSphere(currSection)  {
-    
-  const white = new THREE.Color( 0xffffff );
-  const black = new THREE.Color( 0x000000 );
-  const red = new THREE.Color( 0xFF0000 );
-  const green = new THREE.Color( 0x00FF02);
-  const blue = new THREE.Color( 0x1B00FF );
+const  AnimatedSphere = (currSection) => {
+    //colors
+    const white = new THREE.Color( 0xffffff );
+    const black = new THREE.Color( 0x000000 );
+    const red = new THREE.Color( 0xFF0000 );
+    const green = new THREE.Color( 0x00FF02);
+    const blue = new THREE.Color( 0x1B00FF );
 
     const [position, setPosition] = useState({x:0, y:0, z:0})
     const [active, setActive] = useState(true);
@@ -45,7 +44,6 @@ function AnimatedSphere(currSection)  {
     }
 
     function changeColor(currSection){
-      
       switch(currSection.currSection){
         case 0: tweenColors(white); break;
         case 1: tweenColors(red); break;
@@ -71,7 +69,6 @@ function AnimatedSphere(currSection)  {
       // sphereRef.current.rotation.y += 0.01;
       if (!state.previousTweenColor.equals(state.nextTweenColor) ) {
         state.alphaUnit = +(state.alphaUnit+0.006).toFixed(2)
-          // state.cubeColor = state.cubeColor.lerp(state.nextTweenColor, state.alphaUnit)
         state.cubeColor = state.cubeColor.lerpColors(state.previousTweenColor, state.nextTweenColor, state.alphaUnit);
         matRef.current.color.set(state.cubeColor)
       }
@@ -84,19 +81,16 @@ function AnimatedSphere(currSection)  {
 
     return (
    
-        <mesh  ref={sphereRef}  
-            
-                onPointerUp={()=>{  }}
-                // onPointerOver={() =>{setHover(true);}}
-                // onPointerOut={()=>{setHover(false);}}
-                >
-            
+        <mesh ref={sphereRef}   
+              onPointerUp={()=>{  }}
+              // onPointerOver={() =>{setHover(true);}}
+              // onPointerOut={()=>{setHover(false);}}
+              >           
             <Sphere visible args={[1,100,200]} rotation={[0,0,90]}   scale={2} >
-
             <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={4} roughness={0} metalness={0.5} distort={0.2}/>
         </Sphere>
         </mesh>
-);
+    );
 }
 
 export default React.memo(AnimatedSphere);

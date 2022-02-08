@@ -1,14 +1,15 @@
 import React,{useState, Suspense} from 'react';
 import './styles.css';
+
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import { Canvas } from '@react-three/fiber';
 import { CanvasContainer } from './components/Canvas/CanvasEle';
-import { OrbitControls } from '@react-three/drei';
 import HamIcon2 from './components/Hamburger/HamIcon';
 import { NavLogo } from './components/Navbar/NavbarEle';
-
 import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
+
+import { animateScroll as scroll } from 'react-scroll';
 
 const App = () => {
 
@@ -40,16 +41,20 @@ const App = () => {
 
   window.addEventListener('resize', changeDeskMode)
 
+  const toggleHome = () =>{
+    scroll.scrollToTop()
+}
+
 
   return (
   <>
-    <NavLogo>NNA</NavLogo>
+    <NavLogo to='/' onClick={toggleHome}>NNA</NavLogo>
     <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
     <HamIcon2 toggle={toggle} isOpen={isOpen}/>
     <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
+
     <CanvasContainer  isOpen={isOpen}>
-    <Canvas camera={{fov:10, position: [0,0, 50]}} className="noop">
-      {/* <OrbitControls /> */}
+      <Canvas camera={{fov:10, position: [0,0, 50]}} className="noop">
         <ambientLight intensity={1} />
         <directionalLight position={[-2, 5, 2]} intensity={4} />
         {/* <pointLight position={[2,2,2]} color="white" intensity={1 } /> */}
@@ -57,13 +62,9 @@ const App = () => {
           <AnimatedSphere currSection = {currSection}/>
         </Suspense>
      
-    </Canvas>
-
-
+      </Canvas>
     </CanvasContainer>
 
-    
-   
   </>
   );
 };
