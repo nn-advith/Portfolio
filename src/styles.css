@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif ;
+   
+}
+
+.noscroll {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.scrollallow {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+/* 
+html{
+  height: 100vh;
+} */
+
+::-webkit-scrollbar {
+  width:0;  
+  background: transparent;  
+}
+
+/* actual classes */
+
+.canvas {
+  z-index: -10;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: transparent;
+
+}
+
+
+
+#root{
+  height: 100vh;
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+}
+
