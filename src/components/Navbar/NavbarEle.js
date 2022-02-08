@@ -15,6 +15,19 @@ const fadeIn =  keyframes`
 
 `
 
+const fadeIn2 =  keyframes`
+    0% {
+        opacity: 0;
+        margin-left: -80px;
+    }
+    100% {
+        opacity: 1;
+        margin-left:0;
+    }
+
+`
+
+
 export const Nav = styled.nav`
    background: transparent;
    width:100%;
@@ -26,7 +39,7 @@ export const Nav = styled.nav`
     position: fixed;
     top:0;
     z-index: 100;
-    animation: ${fadeIn} 1s;
+    animation: ${fadeIn} 0.6s;
     transition: all 0.3s ease-in-out;
     filter: ${({isOpen}) => (isOpen ? 'grayscale(100%)': 'graysacle(0%)')};
     
@@ -47,8 +60,8 @@ export const NavbarContainer = styled.div`
 
 
 export const NavLogo = styled.div`
-    color: black;
-    position: absolute;
+    color: white;
+    position: fixed;
     transform:translate(10%, 35%);
     ${'' /* justify-self: flex-start; */}
     cursor: pointer;
@@ -61,8 +74,9 @@ export const NavLogo = styled.div`
     letter-spacing: 5px;
     z-index: 101;
     transition: 0.3s  ease-in-out;
-    @media screen and (max-width: 768px){
-        transform: translate(10%, 50%);
+    animation: ${fadeIn2} 0.6s;
+    @media screen and (max-width: 770px){
+        transform: translate(10%, 90%);
         font-size: 1.2rem;
         transition: 0.3s  ease-in-out;
     }
@@ -76,8 +90,12 @@ export const NavMenu = styled.ul`
     list-style: none;
     text-align: center;
     justify-self: flex-end;
-    @media screen and (max-width: 768px) {
-        display: none;
+    opacity: 100%;
+    transform: translateX(10%);
+    transition: 0.3s ease-in-out;
+    @media screen and (max-width: 770px) {
+        opacity: 0%;
+        transform: translateX(-20%);
         transition: 0.3s ease-in-out;
     }
 `
@@ -87,7 +105,7 @@ export const NavItem = styled.div`
 `
 
 export const NavLink = styled(LinkS)`
-    color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -97,7 +115,7 @@ export const NavLink = styled(LinkS)`
     height: 50%;
     cursor: pointer;
     letter-spacing: 1.4px;
-    border-right: ${({slash}) => (slash? '1px solid #000':'none')};
+    border-right: ${({slash}) => (slash? '1px solid #fff':'none')};
 
     &:hover {
         text-decoration: line-through;

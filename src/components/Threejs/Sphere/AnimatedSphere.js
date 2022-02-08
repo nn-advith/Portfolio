@@ -12,8 +12,9 @@ const  AnimatedSphere = (currSection) => {
     const red = new THREE.Color( 0xFF0000 );
     const green = new THREE.Color( 0x00FF02);
     const blue = new THREE.Color( 0x1B00FF );
+    const grey = new THREE.Color( 0x636363);
 
-    const [position, setPosition] = useState({x:0, y:0, z:0})
+    const [position, setPosition] = useState({x:0, y:-2.5, z:40})
     const [active, setActive] = useState(true);
     const [hover, setHover] = useState(false);
     const [action, setAction] = useState(0);
@@ -24,7 +25,7 @@ const  AnimatedSphere = (currSection) => {
     const vec = new THREE.Vector3(position.x, position.y, position.z);
 
      const  [state, setState] = useState( {
-      cubeColor:white,
+      cubeColor: grey,
       previousTweenColor: black,
       nextTweenColor: black,
       alphaUnit: 0,
@@ -56,16 +57,17 @@ const  AnimatedSphere = (currSection) => {
 
     const changePosition=(currSection)=>{
       switch(currSection.currSection){
-        case 0: setPosition({x:0,y:0,z:-100}); break;
-        case 1: setPosition({x:0,y:0,z:45}); break;
-        case 2: setPosition({x:0,y:0,z:30}); break;
-        case 3: setPosition({x:0,y:2,z:30}); break;
+        case 0: setPosition({x:0,y:-2.5,z:40}); break;
+        case 1: setPosition({x:2,y:0,z:40}); break;
+        case 2: setPosition({x:-2,y:0,z:40}); break;
+        case 3: setPosition({x:1.5 ,y:-1.7,z:40}); break;
       }
     }
 
 
     useFrame(() => {
-      sphereRef.current.position.lerp(vec, 0.05); 
+      sphereRef.current.position.lerp(vec, 0.02); 
+  
       // sphereRef.current.rotation.y += 0.01;
       if (!state.previousTweenColor.equals(state.nextTweenColor) ) {
         state.alphaUnit = +(state.alphaUnit+0.006).toFixed(2)
@@ -75,7 +77,10 @@ const  AnimatedSphere = (currSection) => {
       
     });
 
-    useEffect(()=> {changeColor(currSection); changePosition(currSection);}, [currSection]);
+    useEffect(()=> {
+      // changeColor(currSection);
+      changePosition(currSection);
+    }, [currSection]);
 
 
 
@@ -83,11 +88,11 @@ const  AnimatedSphere = (currSection) => {
    
         <mesh ref={sphereRef}   
               onPointerUp={()=>{  }}
-              // onPointerOver={() =>{setHover(true);}}
-              // onPointerOut={()=>{setHover(false);}}
+              onPointerOver={() =>{setHover(true);}}
+              onPointerOut={()=>{setHover(false);}}
               >           
-            <Sphere visible args={[1,100,200]} rotation={[0,0,90]}   scale={2} >
-            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={4} roughness={0} metalness={0.5} distort={0.2}/>
+            <Sphere visible args={[1,100,200]} rotation={[0,0,90]}  scale={2} >
+            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={1} roughness={0.4} metalness={0.5} distort={0.25}/>
         </Sphere>
         </mesh>
     );

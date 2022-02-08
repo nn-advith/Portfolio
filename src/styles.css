@@ -6,6 +6,10 @@
    
 }
 
+body{
+  background-color: #000;
+}
+
 #root{
   height: 100vh;
 }
@@ -19,7 +23,8 @@
 
 .canvas {
   z-index: -10;
-  position: absolute;
+  position: fixed;
+  height: 100%;
   top:0;
   left:0;
   background-color: transparent;

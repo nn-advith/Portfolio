@@ -10,6 +10,7 @@ import { NavLogo } from './components/Navbar/NavbarEle';
 import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
 
 import { animateScroll as scroll } from 'react-scroll';
+import Sidesocial from './components/SideSocials/Sidesocial';
 
 const App = () => {
 
@@ -48,15 +49,18 @@ const App = () => {
 
   return (
   <>
-    <NavLogo  to='/' onClick={toggleHome}>NNA</NavLogo>
+    <NavLogo  to='/' onClick={()=>{toggleHome(); setCurrSection(0)}}>NNA</NavLogo>
     <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
     <HamIcon2 toggle={toggle} isOpen={isOpen}/>
     <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
+    <Sidesocial />
+
 
     <CanvasContainer  isOpen={isOpen}>
-      <Canvas camera={{fov:10, position: [0,0, 50]}} className="noop">
-        <ambientLight intensity={1} />
-        <directionalLight position={[-2, 5, 2]} intensity={4} />
+      <Canvas  camera={{fov:10, position: [0,0, 50]}}>
+      {/* <color attach="background" args={["black"]} /> */}
+        <ambientLight intensity={0.2} />
+        <directionalLight position={[0,2,2]} intensity={0.5} />
         {/* <pointLight position={[2,2,2]} color="white" intensity={1 } /> */}
         <Suspense fallback={null} >
           <AnimatedSphere currSection = {currSection}/>
