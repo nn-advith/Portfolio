@@ -26,7 +26,7 @@ export const SideSocialContainer  = styled.div`
     transition: 0.3s all ease-in-out;
     
     @media screen and (max-width: 770px){
-        left: -10%;
+        left: -25%;
         transition: 0.3s all ease-in-out;
     }
 `
