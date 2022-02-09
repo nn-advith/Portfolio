@@ -71,7 +71,7 @@ export const NavLogo = styled.div`
     margin-left: 15px;
     text-decoration: none;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 0px;
     z-index: 101;
     transition: 0.3s  ease-in-out;
     animation: ${fadeIn2} 0.6s;
@@ -79,6 +79,10 @@ export const NavLogo = styled.div`
         transform: translate(10%, 90%);
         font-size: 1.2rem;
         transition: 0.3s  ease-in-out;
+    }
+
+    &:hover{
+        
     }
 `
 
@@ -101,7 +105,7 @@ export const NavMenu = styled.ul`
 `
 
 export const NavItem = styled.div`
-   height: 80px;  
+   height: 60px;  
 `
 
 export const NavLink = styled(LinkS)`
@@ -109,7 +113,8 @@ export const NavLink = styled(LinkS)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    margin-top: 0.9rem;
     margin-bottom: 1.2rem;
     padding: 0 1rem;
     height: 50%;

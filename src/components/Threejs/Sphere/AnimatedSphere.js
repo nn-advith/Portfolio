@@ -10,9 +10,10 @@ const  AnimatedSphere = (currSection) => {
     const white = new THREE.Color( 0xffffff );
     const black = new THREE.Color( 0x000000 );
     const red = new THREE.Color( 0xFF0000 );
-    const green = new THREE.Color( 0x00FF02);
+    const green = new THREE.Color( 0x5DFF00);
     const blue = new THREE.Color( 0x1B00FF );
-    const grey = new THREE.Color( 0x636363);
+    const grey = new THREE.Color( 0x323232);
+    const yellow = new THREE.Color( 0xF4D600);
 
     const [position, setPosition] = useState({x:0, y:-2.5, z:40})
     const [active, setActive] = useState(true);
@@ -66,7 +67,7 @@ const  AnimatedSphere = (currSection) => {
 
 
     useFrame(() => {
-      sphereRef.current.position.lerp(vec, 0.02); 
+      sphereRef.current.position.lerp(vec, 0.04); 
   
       // sphereRef.current.rotation.y += 0.01;
       if (!state.previousTweenColor.equals(state.nextTweenColor) ) {
@@ -92,7 +93,7 @@ const  AnimatedSphere = (currSection) => {
               onPointerOut={()=>{setHover(false);}}
               >           
             <Sphere visible args={[1,100,200]} rotation={[0,0,90]}  scale={2} >
-            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={1} roughness={0.4} metalness={0.5} distort={0.25}/>
+            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={1} roughness={1} metalness={1} emissive={blue} distort={0.25}/>
         </Sphere>
         </mesh>
     );

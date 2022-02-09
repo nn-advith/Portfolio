@@ -13,16 +13,24 @@ const fadeIn =  keyframes`
     }
 
 `
+export const SideSocialLine = styled.div`
+    position: absolute;
+    left: 1.4rem;
+    bottom: 0%;
+    background: #fff;
+    width: 2px;
+    height: 30%;
+    opacity: 50%;
+
+`
 
 export const SideSocialContainer  = styled.div`
-    
     position: fixed;
     animation: ${fadeIn} 0.6s;
     bottom: 0;
-    left: 1%;
-    height: 30%;
+    left: 0.5%;
+    height: 25%;
     z-index: 990;
-    border-left: 1px solid #fff;
     transition: 0.3s all ease-in-out;
     
     @media screen and (max-width: 770px){
@@ -40,14 +48,16 @@ export const SocialMenu = styled.div`
 `
 
 export const SocialLink = styled.a`
-    opacity: 20%;
-    margin-left: 0.8rem;
+    opacity: 40%;
+    margin-left: 0.7rem;
     margin-bottom: 0.8rem;
+
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transition: 0.3s all ease;
     &:hover{
         opacity: 100%;
+        transform: translateY(-.3rem);
         transition: 0.3s all ease;
     }
 `

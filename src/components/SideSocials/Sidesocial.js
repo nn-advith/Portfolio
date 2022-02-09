@@ -1,5 +1,5 @@
 import React from 'react';
-import { SideSocialContainer, SocialLink, SocialMenu } from './SidesocialEle';
+import { SideSocialContainer, SocialLink, SocialMenu, SideSocialLine } from './SidesocialEle';
 
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
@@ -7,6 +7,7 @@ const Sidesocial = () => {
   return (
     <>
         <SideSocialContainer>
+            <SideSocialLine />
             <SocialMenu>
                 <SocialLink href="//www.github.com/nn-advith"><FaGithub/></SocialLink>
                 <SocialLink href="https://www.linkedin.com/in/n-n-advith-5583691b3/"><FaLinkedin/></SocialLink>
