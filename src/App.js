@@ -15,7 +15,7 @@ import HeroSection from './components/HeroSection/HeroSection';
 
 const App = () => {
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false)
   const [deskMode, setdeskMode] = useState(window.innerWidth<768 ? false:true);
   const [currSection, setCurrSection ] = useState(0);
