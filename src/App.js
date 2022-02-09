@@ -1,5 +1,7 @@
-import React,{useState, Suspense} from 'react';
+import React,{useState, Suspense, useEffect} from 'react';
 import './styles.css';
+import { animateScroll as scroll } from 'react-scroll';
+import PuffLoader from "react-spinners/PuffLoader"; 
 
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -8,13 +10,12 @@ import { CanvasContainer } from './components/Canvas/CanvasEle';
 import HamIcon2 from './components/Hamburger/HamIcon';
 import { NavLogo } from './components/Navbar/NavbarEle';
 import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
-
-import { animateScroll as scroll } from 'react-scroll';
 import Sidesocial from './components/SideSocials/Sidesocial';
 import HeroSection from './components/HeroSection/HeroSection';
 
 const App = () => {
 
+  const [loading, setLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
   const [deskMode, setdeskMode] = useState(window.innerWidth<768 ? false:true);
   const [currSection, setCurrSection ] = useState(0);
@@ -46,12 +47,26 @@ const App = () => {
 
   const toggleHome = () =>{
     scroll.scrollToTop()
-}
+  }
+
+  useEffect(()=>{
+    setLoading(true);
+    setTimeout(()=>{
+      setLoading(false);
+    }, 5000)
+  }, []);
 
 
   return (
   <>
-    <NavLogo  to='/' onClick={()=>{toggleHome();setIsOpen(false); setCurrSection(0)}}>NNA</NavLogo>
+    {
+      loading ?
+      <div className='loader'>
+      <PuffLoader color={"#6702e4"} loading={loading} size={100} />
+      </div>
+      :
+      <div>
+      <NavLogo  to='/' onClick={()=>{toggleHome();setIsOpen(false); setCurrSection(0)}}>NNA</NavLogo>
     <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
     <HamIcon2 toggle={toggle} isOpen={isOpen}/>
     <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
@@ -70,7 +85,10 @@ const App = () => {
      
       </Canvas>
     </CanvasContainer>
+    </div>
 
+    }
+    
   </>
   );
 };
