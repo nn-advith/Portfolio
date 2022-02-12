@@ -1,18 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 
-
-
-const fadeIn =  keyframes`
-    0% {
-        opacity: 0;
-        margin-top: 80px;
-    }
-    100% {
-        opacity: 1;
-        margin-top:0;
-    }
-
-`
+import { fadeIn } from '../Animations/Animations';
 
 export const HeroContainer = styled.div`
     position: absolute;
@@ -21,7 +9,7 @@ export const HeroContainer = styled.div`
     align-items:center;
     color: #fff;
     width: 100%;
-    height: 80%;
+    height: 90%;
     background: transparent;
     z-index: 95;
     animation: ${fadeIn} 1s;
@@ -35,7 +23,7 @@ export const HeroWrapper =  styled.div`
     justify-content: left:
     align-items: center;
     width: 70%;
-    padding-top: 5%;
+
     transition: 0.2s all ease-in-out;
     @media screen and (max-width: 770px){
         width: 85%;
@@ -89,8 +77,8 @@ export const HeroText2 = styled.div`
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 10rem;
-        height:10.2rem;
+        font-size: 8rem;
+        height:8.2rem;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -118,9 +106,9 @@ export const HeroText3 = styled.div`
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 5rem;
-        height:5.2rem;
-        padding-left: 5px;
+        font-size: 4.5rem;
+        height:4.7rem;
+        padding-left: 4px;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -143,7 +131,7 @@ export const HeroText4 = styled.div`
     @media screen and (min-width: 770px){
         font-size: 1.2rem;
         margin-top: 3rem;
-        padding-left: 2px;
+        padding-left: 4px;
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){

@@ -12,6 +12,9 @@ import { NavLogo } from './components/Navbar/NavbarEle';
 import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
 import Sidesocial from './components/SideSocials/Sidesocial';
 import HeroSection from './components/HeroSection/HeroSection';
+import SideHello from './components/SideHello/SideHello';
+import Visiters from './components/Visiters/Visiters';
+import Contact from './components/Contact/Contact';
 
 const App = () => {
 
@@ -72,7 +75,10 @@ const App = () => {
     <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
     <Sidesocial />
     <HeroSection currSection={currSection} active={0}/>
-   
+    {/* <SideHello setCurrSection={setCurrSection}/>
+    <Visiters currSection={currSection} active={21}/> */}
+    <Contact currSection={currSection} active={3}/>
+
     <CanvasContainer  isOpen={isOpen}>
       <Canvas  camera={{fov:10, position: [0,0, 50]}}>
       {/* <color attach="background" args={["black"]} /> */}
