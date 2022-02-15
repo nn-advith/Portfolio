@@ -3,7 +3,7 @@ import { Link as LinkS } from 'react-scroll';
 
 
 export const SidebarLine = styled.div`
-    background: #fff;
+    background: #6702e4;
     position: fixed;
     top: ${({isOpen})=> (isOpen ? '0%': '100%')};
     opacity: ${({isOpen})=> (isOpen ? '1': '0')};
@@ -48,7 +48,7 @@ export const SidebarMenu = styled.ul`
     display: grid;
     grid-template-colums: 1fr;
     grid-template-rows: repeat(6, 80px);
-    text-align: center;
+    text-align: right;
 
     @media screen and (max-width: 770px){
         grid-template-rows: repeat(6, 80px);
@@ -79,6 +79,7 @@ export const SideSocialMenu = styled.div`
     bottom: 3rem;
     width: 100%;
     display: flex;
+    
     justify-content: center;
     align-items: center;
     background: transparent;

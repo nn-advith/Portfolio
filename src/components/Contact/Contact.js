@@ -2,7 +2,9 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 import { Column1, Column2,ContactRow, ContactContainer, ContactWrapper, ContactText1, ColumnWrapper, ColumnText2,
-        ContactForm, ContactInput, ContactText, ContactButton } from './ContactEle'
+        ContactForm, ContactInput, ContactButton } from './ContactEle'
+
+const {REACT_APP_SERVICE_ID,REACT_APP_TEMPLATE_ID,REACT_APP_USER_ID} = process.env;
 
 const Contact = ({currSection, active}) => {
 
@@ -10,8 +12,9 @@ const Contact = ({currSection, active}) => {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        
 
-        emailjs.sendForm('service_eanb30l', 'template_7j9b4dx', form.current, 'user_gIfNSPV6hAfO1cf1hq4N6')
+        emailjs.sendForm(`${REACT_APP_SERVICE_ID}`, `${REACT_APP_TEMPLATE_ID}`, form.current, `${REACT_APP_USER_ID}`)
           .then((result) => {
               console.log(result.text);
           }, (error) => {
