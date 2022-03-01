@@ -22,7 +22,7 @@ export const AboutRow = styled.div`
     margin-top: 10%;
     display: grid;
     align-items: center;
-    width: 100%;
+ 
     grid-template-areas: 'col1 col2';
     background: transparent;
     height: 85%;
@@ -47,11 +47,11 @@ export const AboutRow = styled.div`
         transition: 0.3s all ease-in-out;
     }
     @media screen and (min-width: 1100px) {
-        width: 80%;
+        width: 70%;
         margin-top: 10%;
         padding-bottom: 0%;
         transition: 0.3s all ease-in-out;
-        grid-auto-columns: 7fr 4.5fr;
+        grid-auto-columns: 1.5fr 1fr;
         grid-template-areas: 'col1 col2';
         transition: 0.3s all ease-in-out;
     }
@@ -73,22 +73,33 @@ export const Column2 = styled.div`
 
 export const AboutInfo = styled.div`
 
-    padding: 0 20px;
-    text-align: left;
+    padding:5px 20px;
+    text-align: right;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
    
     @media screen and (max-width: 770px){
         overflow: hidden;
         height: auto;
+        text-align: left;
     }
     @media screen and (min-width: 770px) {
         overflow: hidden;
         height: auto;
+        text-align: left;
     }
     @media screen and (min-width: 1100px) {
         overflow-y: scroll;
         height: 60vh;
         overflow-x: hidden;
-        box-shadow: 1px 0px 0 #6702e4;
+        text-align: right;
+        padding-top: 10px;
+        font-size: 1.3rem;
+        box-shadow: 0.5px 0px 0 #6702e4;
+
    
 
         &::-webkit-scrollbar-track
@@ -99,11 +110,12 @@ export const AboutInfo = styled.div`
         &::-webkit-scrollbar
         {
             width: 5px;
+         
             background-color: transparent;
         }
 
         &::-webkit-scrollbar-thumb
-        {
+        {   border-radius: 3px;
             background-color: #6702e4;	
         }
        
@@ -111,9 +123,38 @@ export const AboutInfo = styled.div`
 
 `
 
+export const AboutInfoLine = styled.div`
+    background: transparent;
+    position: relative;
+    
+    transition: 0.3s ease-in-out;
+
+    @media screen and (max-width: 770px){
+
+        margin-top: 20px;
+        padding-left: 20px; 
+        border-left: 2px solid #6702e4;
+    }
+
+    @media screen and (min-width: 770px){
+        margin-top: 20px;
+        padding-left: 20px; 
+        border-left: 2px solid #6702e4;
+    }
+
+    @media screen and (min-width: 1100px){
+        top: 5%;
+        width: 94%;
+        padding-right: 20px; 
+        border-right: 2px solid #fff;
+        border-left: none;
+    }
+`
+
 
 export const AboutHeading = styled.div`
     display: flex;
+ 
     position: absolute;
     justify-content: left;
     align-items:center;
@@ -126,7 +167,8 @@ export const AboutHeading = styled.div`
     opacity: 100%;
     padding-left: 5px;
     text-align:left;
-    border-bottom: 1px solid #6702e4;
+
+ 
     @media screen and (max-width: 770px){
         font-size: 1.5rem;
         height: 2rem;
@@ -160,8 +202,7 @@ export const AboutHeading = styled.div`
 
 export const AboutImgWrap = styled.div`
     display: flex;
-    
-
+    padding-bottom: 40px;
     @media screen and (max-width: 1100px){
         justify-content: center;
         padding-bottom: 50px;
@@ -177,12 +218,12 @@ export const AboutPic = styled.div`
     display: flex;
     
     @media screen and (max-width: 1100px){
-        margin-top: 20%;
+        margin-top: 10%;
         justify-content: center;
     }
 
     @media screen and (min-width: 1100px){
-        margin-left: 20%;
+        ${'' /* margin-left: 20%; */}
     }
     
     
@@ -192,7 +233,7 @@ export const AboutPic = styled.div`
         
         width: 100%;
         height: 100%;
-        border-radius: 3px;
+        border-radius: 6px;
         
 
 
@@ -202,7 +243,7 @@ export const AboutPic = styled.div`
                 transition: 0.3s all ease-in-out;
             }
             &:before{
-                top: 5px;
+                top: 3px;
                 left: 5px; 
                 transition: 0.3s all ease-in-out;
             }
@@ -216,7 +257,7 @@ export const AboutPic = styled.div`
         .aboutimg{
             width: 100%;
             height: 100%;
-            border-radius: 3px;
+            border-radius: 6px;
             mix-blend-mode: multiply;
             filter: grayscale(100%) contrast(1);
             transition: 0.3s all ease-in-out;
@@ -228,10 +269,10 @@ export const AboutPic = styled.div`
             display: block;
             width: 100%;
             height: 100%;
-            top: 10px;
+            top: 6px;
             left: 10px;
             z-index: -1;
-            border-radius:3px;
+            border-radius:6px;
             border: 1px solid white;
             transition: 0.3s all ease-in-out;
 
@@ -242,10 +283,10 @@ export const AboutPic = styled.div`
             content:'';
             display: block;
             width: 100%;
-            height: 100%;
+            height: 98%;
             top: 0px;
             background-color: #6702e4;
-            border-radius: 3px;
+            border-radius: 6px;
             opacity: 0.4;
             mix-blend-mode: screen;
             transition: 0.3s all ease-in-out;

@@ -10,7 +10,7 @@ const HeroSection = ({currSection, active}) => {
        <HeroText1>Hi, my name is</HeroText1>
        <HeroText2>N N Advith.</HeroText2>
        <HeroText3>I'm a programmer.</HeroText3>
-       <HeroText4>I like to design and build front-end applications while delving in other technologies.</HeroText4>
+       <HeroText4>I like to design and build web applications while delving in other technologies.</HeroText4>
     </HeroWrapper>
     </HeroContainer>
     </>
