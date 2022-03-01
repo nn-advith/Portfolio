@@ -67,6 +67,7 @@ export const SidebarLink = styled(LinkS)`
     color: #fff;
     letter-spacing: 1.2px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         text-decoration: line-through;
@@ -91,7 +92,8 @@ export const SideSocialLink = styled.a`
     color: #fff;
     font-size: 2rem;
     transition: 0.3s all ease;
-    &:hover{
+    -webkit-tap-highlight-color: transparent;
+    &:hover, &:focus{
         opacity: 100%;
         transition: 0.3s all ease;
     }

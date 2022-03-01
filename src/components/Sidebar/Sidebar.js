@@ -20,15 +20,16 @@ const Sidebar = ({isOpen, deskMode,  toggle, setSection}) => {
     
             <SidebarWrapper>
               <SidebarMenu>
-                <SidebarLink to="about" onClick={() => {toggle(); setSection(1);}}>1. About</SidebarLink>
-                <SidebarLink to="description" onClick={() => {toggle(); setSection(2);}}>2. Skills</SidebarLink>
-                <SidebarLink to="signup" onClick={() => {toggle(); setSection(3);}}>3. Contact Me</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(1);}}>1. About</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(2);}}>2. Skills</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(3);}}>3. Work</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(4);}}>4. Contact Me</SidebarLink>
               </SidebarMenu>
             </SidebarWrapper>
             <SideSocialMenu>
-                <SideSocialLink href="//www.github.com/nn-advith"><FaGithub/></SideSocialLink>
-                <SideSocialLink href="https://www.linkedin.com/in/n-n-advith-5583691b3/"><FaLinkedin/></SideSocialLink>
-                <SideSocialLink href="https://www.instagram.com/nn_advith/"><FaInstagram/></SideSocialLink>
+                <SideSocialLink href="//www.github.com/nn-advith"  target="_blank" rel="noreferrer noopener"><FaGithub/></SideSocialLink>
+                <SideSocialLink href="https://www.linkedin.com/in/n-n-advith-5583691b3/" target="_blank" rel="noreferrer noopener"><FaLinkedin/></SideSocialLink>
+                <SideSocialLink href="https://www.instagram.com/nn_advith/" target="_blank" rel="noreferrer noopener"><FaInstagram/></SideSocialLink>
             </SideSocialMenu>
       </SidebarContainer>
     </>

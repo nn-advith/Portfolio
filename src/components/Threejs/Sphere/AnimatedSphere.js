@@ -59,9 +59,10 @@ const  AnimatedSphere = (currSection) => {
     const changePosition=(currSection)=>{
       switch(currSection.currSection){
         case 0: setPosition({x:0,y:-2.5,z:40}); break;
-        case 1: setPosition({x:2,y:0,z:40}); break;
+        case 1: setPosition({x:3,y:0,z:40}); break;
         case 2: setPosition({x:-2,y:0,z:40}); break;
-        case 3: setPosition({x:1.8 ,y:-2,z:40}); break;
+        case 3: setPosition({x:0,y:0,z:45}); break;
+        case 4: setPosition({x:1.8 ,y:-2,z:40}); break;
       }
     }
 
@@ -93,7 +94,7 @@ const  AnimatedSphere = (currSection) => {
               onPointerOut={()=>{setHover(false);}}
               >           
             <Sphere visible args={[1,100,200]} rotation={[0,0,90]}  scale={2} >
-            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={1} roughness={1} metalness={1} emissive={blue} distort={0.25}/>
+            <MeshDistortMaterial ref={matRef} color={state.cubeColor} speed={1} roughness={1} metalness={1} emissive={blue}  distort={0.25}/>
         </Sphere>
         </mesh>
     );

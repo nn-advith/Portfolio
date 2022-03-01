@@ -65,7 +65,7 @@ export const NavLogo = styled.div`
     transform:translate(10%, 35%);
     ${'' /* justify-self: flex-start; */}
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     margin-left: 15px;
@@ -75,6 +75,8 @@ export const NavLogo = styled.div`
     z-index: 101;
     transition: 0.3s  ease-in-out;
     animation: ${fadeIn2} 0.6s;
+    -webkit-tap-highlight-color: transparent;
+
     @media screen and (max-width: 770px){
         transform: translate(10%, 90%);
         font-size: 1.2rem;
@@ -99,7 +101,7 @@ export const NavMenu = styled.ul`
     transition: 0.3s ease-in-out;
     @media screen and (max-width: 770px) {
         opacity: 0%;
-        transform: translateX(-20%);
+        transform: translateX(100%);
         transition: 0.3s ease-in-out;
     }
 `
@@ -113,14 +115,15 @@ export const NavLink = styled(LinkS)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-size: 0.8rem;
-    margin-top: 0.9rem;
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.2rem;
-    padding: 0 1rem;
-    height: 50%;
+    padding: 0 0.7rem;
+    height: 40%;
     cursor: pointer;
     letter-spacing: 1.4px;
     border-right: ${({slash}) => (slash? '1px solid #fff':'none')};
+    -webkit-tap-highlight-color: transparent;
 
     &:hover {
         text-decoration: line-through;

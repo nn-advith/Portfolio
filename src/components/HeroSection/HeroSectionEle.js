@@ -35,7 +35,7 @@ export const HeroText1 = styled.div`
     display: flex;
     justify-content: left;
     align-items:center;
-    padding-left: 7px;
+    text-align:left;
     letter-spacing: 2px;
     transition: 0.2s all ease-in-out;
     color: #6702e4;
@@ -49,11 +49,13 @@ export const HeroText1 = styled.div`
     @media screen and (min-width: 770px){
         font-size: 1.2rem;
         height:1.4rem;
+        padding-left: 3px;
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 2rem;
-        height:2.2rem;
+        font-size: 1.5rem;
+        height:1.7rem;
+        padding-left: 4px;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -64,7 +66,7 @@ export const HeroText2 = styled.div`
     transition: 0.2s all ease-in-out;
     letter-spacing: 2px;
     font-weight:700;
-
+    text-align:left;
     @media screen and (max-width: 770px){
         font-size: 3rem;
         height: 3.2rem;
@@ -72,13 +74,13 @@ export const HeroText2 = styled.div`
     }
 
     @media screen and (min-width: 770px){
-        font-size: 7rem;
-        height:7.2rem;
+        font-size: 5rem;
+        height:5.2rem;
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 8rem;
-        height:8.2rem;
+        font-size: 6rem;
+        height:6.2rem;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -92,6 +94,7 @@ export const HeroText3 = styled.div`
     font-weight:700;
     opacity: 60%;
     padding-left: 5px;
+    text-align:left;
     @media screen and (max-width: 770px){
         font-size: 1.5rem;
         height: 2rem;
@@ -100,15 +103,15 @@ export const HeroText3 = styled.div`
 
     }
     @media screen and (min-width: 770px){
-        font-size: 4rem;
-        height:4.2rem;
+        font-size: 3rem;
+        height:3.2rem;
         padding-left: 2px;
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 4.5rem;
-        height:4.7rem;
-        padding-left: 4px;
+        font-size: 4rem;
+        height:4.2rem;
+        padding-left: 2px;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -121,6 +124,7 @@ export const HeroText4 = styled.div`
     letter-spacing: 1px;
     opacity: 40%;
     padding-left: 5px;
+    text-align:left;
     @media screen and (max-width: 770px){
         font-size: 0.8rem;
         margin-top: 3rem;   
@@ -129,13 +133,13 @@ export const HeroText4 = styled.div`
 
     }
     @media screen and (min-width: 770px){
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 3rem;
         padding-left: 4px;
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin-top: 3rem;
         padding-left: 5px;
         transition: 0.2s all ease-in-out;

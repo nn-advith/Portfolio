@@ -18,7 +18,7 @@ export const ContactContainer = styled.div`
     transition: 1s all ease-in-out;
 
     @media screen and (max-width: 770px){
-        height: 110%;
+        height: 100%;
         transition: 1s ease-in-out;
     }
 `
@@ -34,10 +34,10 @@ export const ContactRow = styled.div`
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
-    width: 80%;
+    width: 82%;
     grid-template-areas: 'col1 col2';
 
-    @media screen and (max-width: 760px) {
+    @media screen and (max-width: 770px) {
         grid-template-areas: 'col1' 'col2';
     }
 `
@@ -47,6 +47,7 @@ export const Column1 = styled.div`
     padding: 0 15px;
     grid-area: col1;
     border-right: 1px solid #6702e4;
+
 `
 export const Column2 = styled.div`
     margin-bottom: 15px;
@@ -84,8 +85,8 @@ export const   ContactText1 = styled.div`
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 5rem;
-        height:5.2rem;
+        font-size: 4rem;
+        height:4.2rem;
         transition: 0.2s all ease-in-out;
     }
 `
@@ -115,7 +116,7 @@ export const ColumnText2 = styled.div`
         transition: 0.2s all ease-in-out;
     }
     @media screen and (min-width: 1100px){
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin-top: 3rem;
         padding-left: 5px;
         transition: 0.2s all ease-in-out;
@@ -145,7 +146,7 @@ export const ContactInput = styled.input`
     
     &::placeholder{
         color: #6702e4;
-        font-size: 1rem;
+        font-size: 0.8rem;
         letter-spacing: 1px;
     }
 
@@ -174,14 +175,14 @@ export const ContactText = styled.div`
 `
 
 export const ContactButton = styled.button`
-    width: 100px;
-    height: 40px;
+    width: 80px;
+    height: 35px;
 
     border-radius: 20px;
 
     border: none;
     background: #6702e4;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align:center;
     margin: 5% 0;
     transition: 0.3s all ease-in-out;

@@ -32,6 +32,7 @@ export const HamIcon = styled.div`
     transition: all .1s ease-in-out;
     transform: translate(-30%, 150%);
     z-index: 1001;
+    -webkit-tap-highlight-color: transparent;
 
     div {
         width: 60%;

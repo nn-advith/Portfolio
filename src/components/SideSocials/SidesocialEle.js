@@ -49,12 +49,12 @@ export const SocialMenu = styled.div`
 
 export const SocialLink = styled.a`
     opacity: 40%;
-    margin-left: 0.7rem;
-    margin-bottom: 0.8rem;
-
+    margin-left: 0.9rem;
+    margin-bottom: 0.8rem; 
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: 0.3s all ease;
+    -webkit-tap-highlight-color: transparent;
     &:hover{
         opacity: 100%;
         transform: translateY(-.3rem);

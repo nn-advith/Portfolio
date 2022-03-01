@@ -9,9 +9,9 @@ const Sidesocial = () => {
         <SideSocialContainer>
             <SideSocialLine />
             <SocialMenu>
-                <SocialLink href="//www.github.com/nn-advith"><FaGithub/></SocialLink>
-                <SocialLink href="https://www.linkedin.com/in/n-n-advith-5583691b3/"><FaLinkedin/></SocialLink>
-                <SocialLink href="https://www.instagram.com/nn_advith/"><FaInstagram/></SocialLink>
+                <SocialLink href="//www.github.com/nn-advith" target="_blank" rel="noreferrer noopener"><FaGithub/></SocialLink>
+                <SocialLink href="https://www.linkedin.com/in/n-n-advith-5583691b3/" target="_blank" rel="noreferrer noopener"><FaLinkedin/></SocialLink>
+                <SocialLink href="https://www.instagram.com/nn_advith/" target="_blank" rel="noreferrer noopener"><FaInstagram/></SocialLink>
             </SocialMenu>
         </SideSocialContainer>
     </>

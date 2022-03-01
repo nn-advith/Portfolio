@@ -35,7 +35,7 @@ const Contact = ({currSection, active}) => {
                                 Contact Me
                             </ContactText1>
                             <ColumnText2>
-                                If you want to talk about development, have some job opportunities or just to say hi
+                                If you want to talk about development, have some job opportunities or just to say Hi
                             </ColumnText2>
                         </ColumnWrapper>
                     </Column1>
