@@ -1,6 +1,6 @@
 import React from 'react';
-import { AboutContainer, AboutHeading,AboutPic, AboutImgWrap,  AboutInfo, AboutRow, Column1, Column2, AboutInfoLine } from './AboutSectionEle';
-import photo from '../../images/cat.jpg';
+import { AboutContainer, AboutHeading,AboutPic, AboutImgWrap,  AboutInfo, AboutRow, Column1, Column2, AboutInfoLine, TimeLineItem, TimeLineHeading, TimeLineText } from './AboutSectionEle';
+import photo from '../../images/me.png';
 
 const AboutSection = ({currSection, active}) => {
   return (
@@ -17,17 +17,45 @@ const AboutSection = ({currSection, active}) => {
                 <br />
                 <br />
                 <br />
-                This is my timeline:
+                Educational timeline:
 
                 <AboutInfoLine >
-                  jafkwfdjawf<br /><br />
-                  adfjawD<br /><br />
-                  jafkwfdjawf<br /><br />
-                  adfjawD<br /><br />
-                  jafkwfdjawf<br /><br />
-                  adfjawD<br /><br />
-                  jafkwfdjawf<br /><br />
-                  adfjawD<br /><br />
+                  <TimeLineItem>
+                      <TimeLineHeading>
+                        2001
+                      </TimeLineHeading>
+                      <TimeLineText>
+                        Year of Birth
+                      </TimeLineText>
+                  </TimeLineItem>
+                  <TimeLineItem>
+                      <TimeLineHeading>
+                        2005-2017
+                      </TimeLineHeading>
+                      <TimeLineText>
+                        <span className='subhead'>Early Schooling</span> <br/>
+                        Dr. M R S M English Medium School, Mangalore.
+                      </TimeLineText>
+                  </TimeLineItem>
+                  <TimeLineItem>
+                  <TimeLineHeading>
+                        2017-2019
+                      </TimeLineHeading>
+                      <TimeLineText>
+                        <span className='subhead'>Pre-University</span> <br/>
+                        Sharada Vidyalaya, Mangalore.
+                      </TimeLineText>
+                  </TimeLineItem>
+                  <TimeLineItem>
+                  <TimeLineHeading>
+                        2019-2023(Expected)
+                      </TimeLineHeading>
+                      <TimeLineText>
+                        <span className='subhead'>Bachelor of Engineering</span> <br/>
+                        Ramaiah Institute of Technology, Bangalore.
+                      </TimeLineText>
+                   
+                  </TimeLineItem>
                 </AboutInfoLine>
 
                 </AboutInfo>

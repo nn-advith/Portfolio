@@ -45,7 +45,7 @@ const App = () => {
   const changeDeskMode = () => {
    
     setIsOpen(false)
-    setdeskMode(window.innerWidth<768 ? false:true);
+    setdeskMode(window.innerWidth<770 ? false:true);
     
   }
 
@@ -59,7 +59,7 @@ const App = () => {
     setLoading(true);
     setTimeout(()=>{
       setLoading(false);
-    }, 5000)
+    }, 4000)
   }, []);
 
 
@@ -95,7 +95,7 @@ const App = () => {
         <directionalLight position={[0,2,2]} intensity={0.2} />
         {/* <pointLight position={[2,2,2]} color="white" intensity={1 } /> */}
         <Suspense fallback={null} >
-          <AnimatedSphere currSection = {currSection}/>
+          <AnimatedSphere currSection = {currSection} />
         </Suspense>
      
       </Canvas>

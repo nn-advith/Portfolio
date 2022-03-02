@@ -197,3 +197,28 @@ export const ContactButton = styled.button`
     }
 
 `
+
+export const ContactError = styled.div`
+    opacity : ${({error}) => (error ? '100%': '0%')};
+    color: red;
+    width: 100%;
+    letter-spacing: 0.3px;
+    text-align: right;
+    transition: 0.3s all ease-in-out;
+
+    @media screen and (max-width: 770px){
+        margin-top: 50%;
+        transition: 0.3s all ease-in-out;
+
+    }
+
+    @media screen and (max-width: 1100px){
+        transition: 0.3s all ease-in-out;
+        margin-top: 20%;
+    }
+
+    @media screen and (min-width: 1100px){
+        transition: 0.3s all ease-in-out;
+        margin-top: 20%;
+    }
+`

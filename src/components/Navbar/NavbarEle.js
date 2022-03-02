@@ -101,7 +101,7 @@ export const NavMenu = styled.ul`
     transition: 0.3s ease-in-out;
     @media screen and (max-width: 770px) {
         opacity: 0%;
-        transform: translateX(100%);
+        transform: translateX(140%);
         transition: 0.3s ease-in-out;
     }
 `

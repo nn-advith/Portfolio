@@ -81,6 +81,7 @@ export const AboutInfo = styled.div`
     flex-direction: column;
     justify-content: right;
    
+   
     @media screen and (max-width: 770px){
         overflow: hidden;
         height: auto;
@@ -126,27 +127,27 @@ export const AboutInfo = styled.div`
 export const AboutInfoLine = styled.div`
     background: transparent;
     position: relative;
-    
     transition: 0.3s ease-in-out;
 
     @media screen and (max-width: 770px){
 
         margin-top: 20px;
         padding-left: 20px; 
-        border-left: 2px solid #6702e4;
+
+        border-left: 2px solid #A761FF;
     }
 
     @media screen and (min-width: 770px){
         margin-top: 20px;
         padding-left: 20px; 
-        border-left: 2px solid #6702e4;
+        border-left: 2px solid #A761FF;
     }
 
     @media screen and (min-width: 1100px){
-        top: 5%;
+        top: 8%;
         width: 94%;
         padding-right: 20px; 
-        border-right: 2px solid #fff;
+        border-right: 2px solid #777;
         border-left: none;
     }
 `
@@ -217,26 +218,30 @@ export const AboutPic = styled.div`
     height: 70%;
     display: flex;
     
-    @media screen and (max-width: 1100px){
+    
+    @media screen and (max-width: 770px){
         margin-top: 10%;
         justify-content: center;
     }
 
+    @media screen and (min-width: 770px){
+        margin-top: 10%;
+        width: 40%;
+         height: 40%;
+        justify-content: center;
+    }
+
     @media screen and (min-width: 1100px){
-        ${'' /* margin-left: 20%; */}
+        width: 80%;
+        height: 80%;
+
     }
     
-    
-
     .wrapper{
-
-        
         width: 100%;
         height: 100%;
         border-radius: 6px;
         
-
-
         &:hover, &:focus{
             &:after{
                 opacity: 0;
@@ -295,4 +300,81 @@ export const AboutPic = styled.div`
        
     }
 `
+export const TimeLineItem = styled.div`
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
 
+    width: 100%;
+    &:after{
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        margin-top: 5px;
+        right: -11px;
+        border-radius: 50%;
+        border: 2px solid white;
+        background: #6702e4;
+    }   
+    @media screen and (max-width: 770px ){
+        text-align: left;
+        align-items: left;
+  
+        &:after{
+            
+            left: -11px;
+        }
+    }
+    @media screen and (max-width: 1100px){
+        text-align: left;
+        align-items: left;
+
+        &:after{
+            
+            left: -11px;
+        }
+    }
+    @media screen and (min-width: 1100px ){
+        align-items: right;
+        text-align: right;
+
+    }
+`
+export const TimeLineHeading = styled.div`
+    color: #6702e4;
+    font-weight: 700;
+    
+    text-align:left
+    @media screen and (max-width: 770px){
+
+    }
+
+    @media screen and (max-width: 1100px){
+        
+    }
+
+    @media screen and (min-width: 1100px){
+        
+    }
+
+`
+
+export const TimeLineText = styled.div`
+
+    .subhead{
+        opacity: 0.7;
+        font-weight: 200;
+    }
+    @media screen and (max-width: 770px){
+
+    }
+
+    @media screen and (max-width: 1100px){
+        
+    }
+
+    @media screen and (min-width: 1100px){
+        
+    }
+`
