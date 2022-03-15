@@ -25,15 +25,17 @@ const Contact = ({currSection, active}) => {
             console.log(error.text);
         });
         setError(false);
+        form.current.reset();
         }
 
 
-          form.current.reset();
+        
     }
 
     useEffect(()=>{
         if(currSection != active){
             setError(false);
+            form.current.reset();
         }
     }, [currSection])
 

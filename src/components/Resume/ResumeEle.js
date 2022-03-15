@@ -12,18 +12,18 @@ const fadeIn =  keyframes`
 
 `
 
-export const SideHelloLine = styled.div`
+export const ResumeLine = styled.div`
     position: absolute;
     right: 1.4rem;
     bottom: 0%;
     background: #fff;
     width: 2px;
-    height: 40%;
+    height: 55%;
     opacity: 50%;
 
 `
 
-export const SideHelloContainer = styled.div`
+export const ResumeContainer = styled.div`
     position: fixed;
     animation: ${fadeIn} 0.6s;
     justify-content: center;
@@ -38,22 +38,35 @@ export const SideHelloContainer = styled.div`
     }
 `
 
-export const SideHelloText = styled.div`
+export const ResumeText = styled.a`
     position: absolute;
     display: flex;
     justify-content: right;
     align-items: center;
     width: 150px;
+    font-size: 1rem;
     transform: rotate(90deg);
     color: #fff;
     right: -3.4rem;
     bottom: 13rem;
     opacity: 40%;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.7px;
     transition: 0.3s all ease;
+
+    &:visited{
+        text-decoration: none;
+    }
+    &:link{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: none;
+    }
+
     &:hover{
         opacity: 100%;
         transform: translateY(-.3rem) rotate(90deg);
         transition: 0.3s all ease;
+        text-decoration: none;
     }
 `

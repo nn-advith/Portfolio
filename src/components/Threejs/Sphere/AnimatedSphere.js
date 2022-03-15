@@ -68,7 +68,7 @@ const  AnimatedSphere = (currSection) => {
 
 
     useFrame(() => {
-      sphereRef.current.position.lerp(vec, 0.02); 
+      sphereRef.current.position.lerp(vec, 0.03); 
   
       // sphereRef.current.rotation.y += 0.01;
       // if (!state.previousTweenColor.equals(state.nextTweenColor) ) {

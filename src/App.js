@@ -12,7 +12,7 @@ import { NavLogo } from './components/Navbar/NavbarEle';
 import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
 import Sidesocial from './components/SideSocials/Sidesocial';
 import HeroSection from './components/HeroSection/HeroSection';
-import SideHello from './components/SideHello/SideHello';
+import Resume from './components/Resume/Resume';
 import Visiters from './components/Visiters/Visiters';
 import Contact from './components/Contact/Contact';
 import Tabs from './components/Tabs/Tabs';
@@ -81,8 +81,8 @@ const App = () => {
     <Sidesocial />
     <HeroSection currSection={currSection} active={0}/>
     <AboutSection currSection={currSection} active={1} />
-    {/* <SideHello setCurrSection={setCurrSection}/>
-    <Visiters currSection={currSection} active={21}/> */}
+    <Resume setCurrSection={setCurrSection}/>
+    {/* <Visiters currSection={currSection} active={21}/> */}
     <Contact currSection={currSection} active={4}/>
     {/* <Tabs currSection={currSection} active={1}/> */}
 
