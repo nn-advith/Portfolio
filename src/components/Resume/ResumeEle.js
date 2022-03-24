@@ -18,7 +18,7 @@ export const ResumeLine = styled.div`
     bottom: 0%;
     background: #fff;
     width: 2px;
-    height: 55%;
+    height: 45%;
     opacity: 50%;
 
 `
@@ -29,7 +29,7 @@ export const ResumeContainer = styled.div`
     justify-content: center;
     bottom: 0;
     right: 0.5%;
-    height: 30%;
+    height: 35%;
     z-index: 990;
     transition: 0.3s all ease-in-out;
     @media screen and (max-width: 770px){
@@ -48,9 +48,9 @@ export const ResumeText = styled.a`
     transform: rotate(90deg);
     color: #fff;
     right: -3.4rem;
-    bottom: 13rem;
+    bottom: 90%;
     opacity: 40%;
-    letter-spacing: 0.7px;
+    letter-spacing: 1px;
     transition: 0.3s all ease;
 
     &:visited{

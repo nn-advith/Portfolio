@@ -19,7 +19,7 @@ export const SideSocialLine = styled.div`
     bottom: 0%;
     background: #fff;
     width: 2px;
-    height: 40%;
+    height: 45%;
     opacity: 50%;
 
 `
@@ -29,7 +29,7 @@ export const SideSocialContainer  = styled.div`
     animation: ${fadeIn} 0.6s;
     bottom: 0;
     left: 0.5%;
-    height: 30%;
+    height: 35%;
     z-index: 990;
     transition: 0.3s all ease-in-out;
     
@@ -42,7 +42,7 @@ export const SideSocialContainer  = styled.div`
 export const SocialMenu = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     background: transparent;
 `

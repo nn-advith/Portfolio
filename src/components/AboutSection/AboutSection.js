@@ -43,7 +43,7 @@ const AboutSection = ({currSection, active}) => {
                       </TimeLineHeading>
                       <TimeLineText>
                         <span className='subhead'>Pre-University</span> <br/>
-                        Sharada Vidyalaya, Mangalore.
+                        Sharada P U College, Mangalore.
                       </TimeLineText>
                   </TimeLineItem>
                   <TimeLineItem>

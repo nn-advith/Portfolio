@@ -37,7 +37,7 @@ export const SidebarContainer = styled.aside`
 
 export const SidebarWrapper = styled.div`
     color: #fff;
-    margin-top: 100px;
+    margin-top: 30px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -77,7 +77,7 @@ export const SidebarLink = styled(LinkS)`
 
 export const SideSocialMenu = styled.div`
     position: absolute;
-    bottom: 3rem;
+    bottom: 5%;
     width: 100%;
     display: flex;
     
@@ -99,3 +99,34 @@ export const SideSocialLink = styled.a`
     }
 `
 
+export const SideResume = styled.div`
+    display: flex;
+    position: absolute;
+    bottom: 23%;
+    width:100%;
+    justify-content: center;
+    align-items: center;
+
+`
+
+export const ResumeLink = styled.a`
+    color: #fff;
+    opacity: 20%;
+    transition: 0.3s all ease-in-out;
+
+    &:visited{
+        text-decoration: none;
+    }
+    &:link{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: none;
+    }
+
+    &:hover{
+        opacity:100%;
+        transition: 0.3s all ease-in-out;
+    }
+
+`

@@ -24,7 +24,7 @@ const Navbar = ({isOpen,toggle, setSection}) => {
                 <NavLink slash='true' onClick={() => { setSection(2);}}>Skills</NavLink>
             </NavItem>
             <NavItem>
-                <NavLink slash='true' onClick={() => { setSection(3);}}>Work</NavLink>
+                <NavLink slash='true' onClick={() => { setSection(3);}}>Projects</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink onClick={() => { setSection(4);}}>Contact</NavLink>

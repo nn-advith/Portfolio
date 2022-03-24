@@ -17,6 +17,8 @@ import Visiters from './components/Visiters/Visiters';
 import Contact from './components/Contact/Contact';
 import Tabs from './components/Tabs/Tabs';
 import AboutSection from './components/AboutSection/AboutSection';
+import ProjectSection from './components/ProjectSection/ProjectSection';
+import SkillSection from './components/SkillSection/SkillSection';
 
 const App = () => {
 
@@ -81,10 +83,11 @@ const App = () => {
     <Sidesocial />
     <HeroSection currSection={currSection} active={0}/>
     <AboutSection currSection={currSection} active={1} />
+    {/* <SkillSection currSection={currSection} active={2} /> */}
+    <ProjectSection currSection={currSection} active={3} />
     <Resume setCurrSection={setCurrSection}/>
-    {/* <Visiters currSection={currSection} active={21}/> */}
     <Contact currSection={currSection} active={4}/>
-    {/* <Tabs currSection={currSection} active={1}/> */}
+ 
 
 
     {/* threejs */}

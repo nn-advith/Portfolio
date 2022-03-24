@@ -99,19 +99,19 @@ export const AboutInfo = styled.div`
         text-align: right;
         padding-top: 10px;
         font-size: 1.3rem;
-        box-shadow: 0.5px 0px 0 #6702e4;
+        ${'' /* box-shadow: 0.5px 0px 0 #6702e4; */}
 
    
 
         &::-webkit-scrollbar-track
         {
-            background-color: transparent;
+            border-radius: 3px;
+            background-color: #aaa;
         }
 
         &::-webkit-scrollbar
         {
-            width: 5px;
-         
+            width: 3px;
             background-color: transparent;
         }
 
