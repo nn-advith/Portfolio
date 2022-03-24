@@ -266,7 +266,7 @@ export const ProjectCarItem = styled.div`
 
     @media screen and (max-width: 770px){
         width: 350px;
-      
+        height: 110%;
     }
 
     @media screen and (min-width: 770px){
