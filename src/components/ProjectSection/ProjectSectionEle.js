@@ -27,7 +27,7 @@ export const ProjectMask = styled.div`
         position:absolute;
         transform: ${({po}) => (po ? 'translateX(0%)' :'translateX(-100%)')};
         width:100%;
-        height: 100%;
+        height: 100vh;
         background: black;
         opacity: ${({po}) => (po ? '80%' :'0%')};
         z-index: 9;
