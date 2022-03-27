@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { ProjectContainer, ProjectSectionWrapper, ProjectTitle, ProjectView, Card, ProjectMax, ProjectMask,
          ProjectMaxImg, ProjectMaxWrapper, ProjectMaxTitle, ProjectMaxDescription, ProjectMaxTech, ProjectMaxLink, ProjectMaxNav,
         ProjectMaxCarousel, CloseIcon,
@@ -10,6 +10,8 @@ import Fade from 'react-reveal/Fade';
 
 
 const ProjectSection = ({currSection, active}) => {
+
+    const pdiv = useRef();
 
     const [po, setPo] = useState(false);
     const [smoothscroll, setSmoothscroll ] = useState(false)
@@ -30,7 +32,18 @@ const ProjectSection = ({currSection, active}) => {
            setSmoothscroll(true);
         }  
      }  
+
+     async function scrolltotop(){
+        await sleep(300);
+        pdiv.current.scrollTop = 0;
+     }
     
+     useEffect(() => {
+        if(currSection!= active){
+           scrolltotop();
+           
+        }
+     }, [currSection])
 
   return (
       <>
@@ -40,7 +53,7 @@ const ProjectSection = ({currSection, active}) => {
                 <ProjectTitle>
                     Projects.
                 </ProjectTitle>
-                <ProjectView>
+                <ProjectView ref={pdiv}>
                 {projectData.map(data => (
                     <a href={`#`+data.id} className="openlink">
                     <Card onClick={() => {changeOpen(); changeScroll()}}>

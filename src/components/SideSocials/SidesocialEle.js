@@ -60,4 +60,8 @@ export const SocialLink = styled.a`
         transform: translateY(-.3rem);
         transition: 0.3s all ease;
     }
+
+    @media screen and (max-width: 1100px){
+        font-size: 1rem;
+    }
 `

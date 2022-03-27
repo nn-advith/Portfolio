@@ -319,11 +319,27 @@ export const ProjectMax = styled.div`
 `
 
 export const ProjectMaxImg = styled.img`
-    width: 50%;
-    height: 100%;
+
+    object-fit:cover;
+    object-position: left;
     @media screen and (max-width: 770px){
         width: 100%;
         height: 50%;
+    }
+
+    @media screen and (min-width: 770px){
+        width: 50%;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 1100px){
+        width: 60%;
+    height: 100%;
+    }
+
+    @media screen and (min-width: 1300px){
+        width: 60%;
+    height: 100%;
     }
 `
 
@@ -346,6 +362,10 @@ export const ProjectMaxTitle = styled.div`
     padding: 7% 20px;
     font-weight: 500;
     letter-spacing: 0.5px;
+
+    @media screen and (max-width: 770px){
+        font-size: 2rem;
+    }
 `
 
 export const ProjectMaxDescription = styled.div`
@@ -408,7 +428,7 @@ export const ProjectMaxTech = styled.div`
     padding:4% 20px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, 32%);
     gap: 2%;
 
     div{
@@ -421,10 +441,14 @@ export const ProjectMaxTech = styled.div`
         height: 23px;
     }
 
+    @media screen and (max-width: 770px){
+        grid-template-columns: repeat(auto-fill, 32%);
+    }
+
 `
 export const ProjectMaxLink = styled.a`
     width: 50px;
-    padding:0 20px;
+    padding:5% 20px;
     font-size: 2rem;
     color: #fff;
     opacity:30%;
@@ -449,6 +473,11 @@ export const ProjectMaxLink = styled.a`
         opacity: 100%;
         transition: 0.3s all ease-in-out;
         
+    }
+
+    @media screen and (max-width: 770px){
+        font-size: 1.3rem;
+        padding:0 20px;
     }
 `
 
