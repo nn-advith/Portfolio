@@ -60,7 +60,7 @@ const  AnimatedSphere = (currSection) => {
       switch(currSection.currSection){
         case 0: setPosition({x:0,y:-2.5,z:40}); break;
         case 1: setPosition({x:2.6,y:0,z:42}); break;
-        case 2: setPosition({x:-2,y:0,z:40}); break;
+        case 2: setPosition({x:-2.9,y:0,z:35}); break;
         case 3: setPosition({x:0,y:0,z:45}); break;
         case 4: setPosition({x:1.8 ,y:-2,z:40}); break;
       }

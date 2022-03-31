@@ -6,7 +6,7 @@ import { ProjectContainer, ProjectSectionWrapper, ProjectTitle, ProjectView, Car
 import {projectData} from './ProjectData.js';
 import {FiExternalLink} from 'react-icons/fi';
 import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md';
-import Fade from 'react-reveal/Fade';
+
 
 
 const ProjectSection = ({currSection, active}) => {
@@ -39,11 +39,11 @@ const ProjectSection = ({currSection, active}) => {
      }
     
      useEffect(() => {
-        if(currSection!= active){
+        if(currSection!== active){
            scrolltotop();
            
         }
-     }, [currSection])
+     }, [currSection,active, scrolltotop])
 
   return (
       <>
@@ -55,7 +55,7 @@ const ProjectSection = ({currSection, active}) => {
                 </ProjectTitle>
                 <ProjectView ref={pdiv}>
                 {projectData.map(data => (
-                    <a href={`#`+data.id} className="openlink">
+                    <a href={`#`+data.id} key={data.id} className="openlink">
                     <Card onClick={() => {changeOpen(); changeScroll()}}>
                         <div className='wrapper'>
                         <div className='cardtext'>
@@ -78,7 +78,7 @@ const ProjectSection = ({currSection, active}) => {
             
              
             {projectData.map(data => (
-                <ProjectCarItem id={data.id}>
+                <ProjectCarItem id={data.id} key={data.id}>
                 
                 <ProjectMax >         
                 <CloseIcon onClick={changeOpen}>
@@ -99,7 +99,7 @@ const ProjectSection = ({currSection, active}) => {
                     
                     <ProjectMaxTech>
                     {data.tech.map(item => (
-                        <div >{item}</div>
+                        <div key={item}>{item}</div>
                     ))}
                     </ProjectMaxTech>
                     <ProjectMaxLink href={data.link} target="_blank" rel="noreferrer noopener">

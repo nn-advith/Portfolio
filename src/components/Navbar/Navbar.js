@@ -18,7 +18,7 @@ const Navbar = ({isOpen,toggle, setSection}) => {
         <NavbarContainer >       
         <NavMenu>
             <NavItem>
-                <NavLink slash='true' onClick={() => {setSection(1);}}>About</NavLink>
+                <NavLink slash='true'  onClick={() => {setSection(1);}}>About</NavLink>
             </NavItem>
             <NavItem>
                 <NavLink slash='true' onClick={() => { setSection(2);}}>Skills</NavLink>

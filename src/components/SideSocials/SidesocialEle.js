@@ -19,7 +19,7 @@ export const SideSocialLine = styled.div`
     bottom: 0%;
     background: #fff;
     width: 2px;
-    height: 45%;
+    height: 55%;
     opacity: 50%;
 
 `
@@ -29,7 +29,7 @@ export const SideSocialContainer  = styled.div`
     animation: ${fadeIn} 0.6s;
     bottom: 0;
     left: 0.5%;
-    height: 35%;
+    height: 300px;
     z-index: 990;
     transition: 0.3s all ease-in-out;
     

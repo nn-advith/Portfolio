@@ -18,7 +18,7 @@ export const ResumeLine = styled.div`
     bottom: 0%;
     background: #fff;
     width: 2px;
-    height: 45%;
+    height: 55%;
     opacity: 50%;
 
 `
@@ -29,7 +29,7 @@ export const ResumeContainer = styled.div`
     justify-content: center;
     bottom: 0;
     right: 0.5%;
-    height: 35%;
+    height: 300px;
     z-index: 990;
     transition: 0.3s all ease-in-out;
     @media screen and (max-width: 770px){

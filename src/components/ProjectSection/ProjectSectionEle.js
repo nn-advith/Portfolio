@@ -38,7 +38,6 @@ export const ProjectSectionWrapper = styled.div `
     display: flex;
     flex-direction: column;
     width: 85%;
-    
     height: 100%;
    
     @media screen and (max-width: 770px){

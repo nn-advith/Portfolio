@@ -83,7 +83,7 @@ const App = () => {
     <Sidesocial />
     <HeroSection currSection={currSection} active={0}/>
     <AboutSection currSection={currSection} active={1} />
-    {/* <SkillSection currSection={currSection} active={2} /> */}
+    <SkillSection currSection={currSection} active={2} />
     <ProjectSection currSection={currSection} active={3} />
     <Resume setCurrSection={setCurrSection}/>
     <Contact currSection={currSection} active={4}/>
