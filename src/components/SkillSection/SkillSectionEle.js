@@ -21,7 +21,7 @@ export const SkillContainer = styled.div`
 export const SkillWrapper = styled.div `
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 80%;
     
     height: 100%;
    
@@ -38,7 +38,7 @@ export const SkillWrapper = styled.div `
 `
 
 export const SkillTitle = styled.div `
-    color: #fff;
+
     font-weight: 700;
     transition: 0.3s ease-in-out;
 
@@ -46,15 +46,17 @@ export const SkillTitle = styled.div `
         font-size: 1.5rem;
         margin-bottom: 7%;
         margin-top: 30px;
+        color: #6702e4;
     }
     @media screen and (min-width: 770px){
         font-size: 2rem;
         margin-bottom: 2%;  
-
+        color: #fff;
     }
     @media screen and (min-width: 1100px){
         font-size: 3rem;
         margin-bottom: 1%;
+        color: #000;
     }
     
     
@@ -105,21 +107,24 @@ export const SkillGrid = styled.div`
         align-items: center;
         overflow-y : scroll;
         overflow-x : hidden;
+        height: 80%;
     }
 
     @media screen and (min-width: 1100px){
         flex-direction: row;
         overflow-y : hidden;
         overflow-x : hidden;
+        height: 70%;
     }
 `
 
 export const SkillGridItem = styled.div`
     position: relative;
     background-color: transparent;
+ 
     
     
-    padding:50px 20px 50px 0px;
+    padding:20px 20px 50px 0px;
 
     @media screen and (max-width: 770px){
         width: 100%;
@@ -145,7 +150,7 @@ export const CertiGridItem = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 0 20px;
     border-left: 2px solid #6702e4;
     
@@ -211,6 +216,7 @@ export const CertiItem = styled.div`
 export const NextLink = styled.div`
     position: absolute;
     background: transparent;
+
     right: 3%;
     top: 55%;
     transform: rotate(90deg);
@@ -222,7 +228,8 @@ export const NextLink = styled.div`
 
     .next{
         color: #fff;
-        opacity: 60%;
+        opacity: 50%;
+        transition: 0.3s ease-in-out;
         &:link{
             text-decoration: none;
         }
@@ -231,6 +238,11 @@ export const NextLink = styled.div`
         }
         &:visited{
             text-decoration: none;
+        }
+
+        &:hover{
+            opacity: 100%;
+            transition: 0.3s ease-in-out;
         }
     }
 `
@@ -249,7 +261,8 @@ export const PrevLink = styled.div`
 
     .previous{
         color: #fff;
-        opacity: 60%;
+        opacity: 50%;
+        transition: 0.3s ease-in-out;
         &:link{
             text-decoration: none;
         }
@@ -259,15 +272,15 @@ export const PrevLink = styled.div`
         &:visited{
             text-decoration: none;
         }
+
+        &:hover{
+            opacity: 100%;
+            transition: 0.3s ease-in-out;
+        }
     }
 `
 
-export const CertiBox = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5% 0;
-`
+
 
 export const Certilogo = styled.img`
     height: 40%;
@@ -296,4 +309,69 @@ export const CertiLink = styled.a`
         opacity: 100%;
         transition: 0.3s ease-in-out;
     }
+`
+
+export const Languages = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 23%);
+    gap: 2%;
+    padding: 2% 3%;
+
+    @media screen and (max-width: 770px){
+        grid-template-columns: repeat(auto-fill, 32%);
+        padding: 2% 5%;
+        margin-bottom: 20px;
+    }
+
+    
+`
+
+export const LangItem = styled.div`
+        background: #eee;
+        margin: 7px 0px;
+        color: #6702e4;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 1rem;
+        font-weight: 500;
+        height: 33px;
+        transition: 0.3s ease-in-out;
+
+    &:hover{
+        background: #9742ff;
+        color: #000;
+    }
+`
+
+export const TechImageContainer = styled.div`
+    width: 100%;
+   
+    display: grid;
+
+    gap: 2%;
+    
+
+    @media screen and (max-width: 770px){
+        grid-template-columns: repeat(auto-fill, 32%);
+        padding: 2% 5%;
+    }
+
+    @media screen and (min-width: 770px){
+        grid-template-columns: repeat(auto-fill, 23%);
+        padding: 2% 5%;
+    }
+
+    @media screen and (min-width: 1100px){
+        grid-template-columns: repeat(auto-fill, 16%);
+        padding: 2% 3%;
+    }
+`
+
+export const TechImage = styled.img`
+    margin: 5px 5px;
+    height: 80px;
+
+    
 `

@@ -39,9 +39,9 @@ const ProjectSection = ({currSection, active}) => {
      }
     
      useEffect(() => {
+        
         if(currSection!== active){
-           scrolltotop();
-           
+           scrolltotop();  
         }
      }, [currSection,active, scrolltotop])
 

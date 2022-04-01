@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { CertiTitle, SkillContainer, SkillGrid, SkillGridItem, CertiGridItem,  SkillTitle, SkillWrapper, CertiScroll, CertiItem, CertiItemCont, PrevLink, 
-        NextLink, Certilogo, CTitle, CertiLink, CertiBox } from './SkillSectionEle';
+        NextLink, Certilogo, CTitle, CertiLink, Languages, LangItem, TechImageContainer, TechImage } from './SkillSectionEle';
 import { Certificates } from './Certifications';
 import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md';
 import {FiExternalLink} from 'react-icons/fi';
+
+//image imports
+import react from '../../images/tech/react.png';
+import node from '../../images/tech/node.png';
+import mongodb from '../../images/tech/mongodb.png';
+import mysql from '../../images/tech/mysql.png';
 
 const SkillSection = ({currSection, active}) => {
 
@@ -34,11 +40,22 @@ const SkillSection = ({currSection, active}) => {
     <SkillTitle>Skills.</SkillTitle>
         <SkillGrid>
             <SkillGridItem className='mr'>
-Est ullamco duis occaecat occaecat veniam incididunt Lorem amet voluptate qui ullamco nisi sint. Dolor proident consectetur sint aliqua aliqua non nisi do minim irure ut amet. Irure et et in pariatur laborum sit. Culpa voluptate dolore nulla cupidatat dolor non officia qui labore sunt irure. Sit dolor non consectetur dolor in dolor.
-
-Eu ad officia excepteur laboris ut dolore eu. Nostrud quis exercitation excepteur non amet nisi est dolor adipisicing aliqua fugiat deserunt in quis. Mollit enim tempor ad velit ipsum consequat est aute consectetur ad ex.
-
-Irure adipisicing culpa nisi velit. Pariatur nostrud est adipisicing pariatur ex do pariatur mollit nulla est amet sunt officia commodo. Ea amet excepteur anim duis magna. Dolor quis mollit adipisicing voluptate mollit eu ipsum excepteur. Eu aute ex commodo ullamco voluptate labore mollit consectetur. Sunt id duis ea elit eu mollit culpa sit nostrud irure eiusmod.
+            <CertiTitle>Languages</CertiTitle>
+                <Languages>
+                    <LangItem>HTML</LangItem>
+                    <LangItem>CSS</LangItem>
+                    <LangItem>JavaScript</LangItem>
+                    <LangItem>Python</LangItem>
+                    <LangItem>C++</LangItem>    
+                </Languages>
+                <br/>
+                <CertiTitle>Worked with</CertiTitle>
+                <TechImageContainer>
+                    <TechImage src={react}/>
+                    <TechImage src={node}/>
+                    <TechImage src={mongodb}/>
+                    <TechImage src={mysql}/>
+                </TechImageContainer>
             </SkillGridItem>
             <CertiGridItem className='ml'>
                 <CertiTitle>Certificates & Certifications</CertiTitle>

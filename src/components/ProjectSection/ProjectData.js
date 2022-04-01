@@ -3,7 +3,7 @@ import img1 from '../../images/projectImages/website.png';
 
 export const projectData = [
     {
-        id:'item1',
+        id:'p1',
         name: 'My Portfolio',
         imgsrc: img1,
         subhead: 'Personal Website',
