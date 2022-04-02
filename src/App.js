@@ -13,9 +13,7 @@ import AnimatedSphere from './components/Threejs/Sphere/AnimatedSphere';
 import Sidesocial from './components/SideSocials/Sidesocial';
 import HeroSection from './components/HeroSection/HeroSection';
 import Resume from './components/Resume/Resume';
-import Visiters from './components/Visiters/Visiters';
 import Contact from './components/Contact/Contact';
-import Tabs from './components/Tabs/Tabs';
 import AboutSection from './components/AboutSection/AboutSection';
 import ProjectSection from './components/ProjectSection/ProjectSection';
 import SkillSection from './components/SkillSection/SkillSection';
@@ -77,32 +75,32 @@ const App = () => {
       :
       <div>
       <NavLogo  to='/' onClick={()=>{toggleHome();setIsOpen(false); setCurrSection(0)}}>NNA</NavLogo>
-    <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
-    <HamIcon2 toggle={toggle} isOpen={isOpen}/>
-    <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
-    <Sidesocial />
-    <HeroSection currSection={currSection} active={0}/>
-    <AboutSection currSection={currSection} active={1} />
-    <SkillSection currSection={currSection} active={2} />
-    <ProjectSection currSection={currSection} active={3} />
-    <Resume setCurrSection={setCurrSection}/>
-    <Contact currSection={currSection} active={4}/>
+      <Navbar isOpen={isOpen} toggle={toggle} setSection={setCurrSection} />
+      <HamIcon2 toggle={toggle} isOpen={isOpen}/>
+      <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
+      <Sidesocial />
+      <HeroSection currSection={currSection} active={0}/>
+      <AboutSection currSection={currSection} active={1} />
+      <SkillSection currSection={currSection} active={2} />
+      <ProjectSection currSection={currSection} active={3} />
+      <Resume setCurrSection={setCurrSection}/>
+      <Contact currSection={currSection} active={4}/>
  
 
 
     {/* threejs */}
-    <CanvasContainer  isOpen={isOpen}>
-      <Canvas  camera={{fov:10, position: [0,0, 50]}}>
-      {/* <color attach="background" args={["black"]} /> */}
-        <ambientLight intensity={1} />
-        <directionalLight position={[0,2,2]} intensity={0.2} />
-        {/* <pointLight position={[2,2,2]} color="white" intensity={1 } /> */}
-        <Suspense fallback={null} >
-          <AnimatedSphere currSection = {currSection} />
-        </Suspense>
-     
-      </Canvas>
-    </CanvasContainer>
+      <CanvasContainer  isOpen={isOpen}>
+        <Canvas  camera={{fov:10, position: [0,0, 50]}}>
+        {/* <color attach="background" args={["black"]} /> */}
+          <ambientLight intensity={1} />
+          <directionalLight position={[0,2,2]} intensity={0.2} />
+          {/* <pointLight position={[2,2,2]} color="white" intensity={1 } /> */}
+          <Suspense fallback={null} >
+            <AnimatedSphere currSection = {currSection} />
+          </Suspense>
+      
+        </Canvas>
+      </CanvasContainer>
     </div>
 
     }

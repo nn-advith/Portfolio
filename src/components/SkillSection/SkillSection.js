@@ -55,6 +55,7 @@ const SkillSection = ({currSection, active}) => {
                     <TechImage src={node}/>
                     <TechImage src={mongodb}/>
                     <TechImage src={mysql}/>
+                    
                 </TechImageContainer>
             </SkillGridItem>
             <CertiGridItem className='ml'>

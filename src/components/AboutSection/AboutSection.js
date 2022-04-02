@@ -17,17 +17,9 @@ const AboutSection = ({currSection, active}) => {
                 <br />
                 <br />
                 <br />
-                Educational timeline:
+                Education : 
 
                 <AboutInfoLine >
-                  <TimeLineItem>
-                      <TimeLineHeading>
-                        2001
-                      </TimeLineHeading>
-                      <TimeLineText>
-                        Year of Birth
-                      </TimeLineText>
-                  </TimeLineItem>
                   <TimeLineItem>
                       <TimeLineHeading>
                         2005-2017
@@ -54,10 +46,8 @@ const AboutSection = ({currSection, active}) => {
                         <span className='subhead'>Bachelor of Engineering</span> <br/>
                         Ramaiah Institute of Technology, Bangalore.
                       </TimeLineText>
-                   
                   </TimeLineItem>
                 </AboutInfoLine>
-
                 </AboutInfo>
               </Column1>
               <Column2>

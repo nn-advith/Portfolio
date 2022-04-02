@@ -21,19 +21,21 @@ export const SkillContainer = styled.div`
 export const SkillWrapper = styled.div `
     display: flex;
     flex-direction: column;
-    width: 80%;
-    
+
     height: 100%;
    
     @media screen and (max-width: 770px){
         margin-top: 30%;
+        width: 87%;
         
     }
     @media screen and (min-width: 770px){
         margin-top: 20%;
+        width: 70%;
     }
     @media screen and (min-width: 1100px){
         margin-top: 10%;
+        width: 70%;
     }
 `
 
@@ -51,12 +53,12 @@ export const SkillTitle = styled.div `
     @media screen and (min-width: 770px){
         font-size: 2rem;
         margin-bottom: 2%;  
-        color: #fff;
+        color: #6702E4;
     }
     @media screen and (min-width: 1100px){
         font-size: 3rem;
         margin-bottom: 1%;
-        color: #000;
+        color: #6702e4;
     }
     
     
@@ -99,7 +101,7 @@ export const SkillGrid = styled.div`
         overflow-y : scroll;
         overflow-x : hidden;
         height: 80%;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
 
     @media screen and (min-width: 770px){
@@ -108,33 +110,30 @@ export const SkillGrid = styled.div`
         overflow-y : scroll;
         overflow-x : hidden;
         height: 80%;
+        padding-bottom: 30px;
     }
 
     @media screen and (min-width: 1100px){
         flex-direction: row;
         overflow-y : hidden;
         overflow-x : hidden;
-        height: 70%;
+        height: 60%;
+        margin-top: 50px;   
     }
 `
 
 export const SkillGridItem = styled.div`
     position: relative;
     background-color: transparent;
- 
     
-    
-    padding:20px 20px 50px 0px;
+    padding:10px 20px 50px 0px;
 
     @media screen and (max-width: 770px){
         width: 100%;
-        
-
     }
 
     @media screen and (min-width: 770px){
-        width: 80%;
-        
+        width: 80%;    
     }
 
     @media screen and (min-width: 1100px){
@@ -150,7 +149,7 @@ export const CertiGridItem = styled.div`
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    ${'' /* justify-content: center; */}
     padding: 0 20px;
     border-left: 2px solid #6702e4;
     
@@ -175,9 +174,11 @@ export const CertiGridItem = styled.div`
 export const CertiTitle = styled.div`
     width: 100%;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 1px;
     padding: 20px 20px;
+
+   
 `
 
 export const CertiScroll = styled.div`
@@ -217,7 +218,7 @@ export const NextLink = styled.div`
     position: absolute;
     background: transparent;
 
-    right: 3%;
+    right: 2%;
     top: 55%;
     transform: rotate(90deg);
 
@@ -250,8 +251,8 @@ export const NextLink = styled.div`
 export const PrevLink = styled.div`
     position: absolute;
     background: transparent;
-    right:3%;
-    top: 50%;
+    right:2%;
+    top: 40%;
     transform: rotate(90deg);
 
     @media screen and (max-width: 770px){
@@ -283,8 +284,8 @@ export const PrevLink = styled.div`
 
 
 export const Certilogo = styled.img`
-    height: 40%;
-    width: 80%;
+    height: 30%;
+    width: 70%;
     object-fit: contain;
 `
 
@@ -293,7 +294,7 @@ export const CTitle = styled.div`
     width: 80%;
     text-align: center;
     letter-spacing: 0.7px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 3% 0px;
     
 `
@@ -331,12 +332,12 @@ export const LangItem = styled.div`
         background: #eee;
         margin: 7px 0px;
         color: #6702e4;
-        border-radius: 20px;
+        border-radius: 15px;
         text-align: center;
-        line-height: 30px;
-        font-size: 1rem;
+        line-height: 25px;
+        font-size: 0.8rem;
         font-weight: 500;
-        height: 33px;
+        height: 27px;
         transition: 0.3s ease-in-out;
 
     &:hover{
@@ -356,6 +357,7 @@ export const TechImageContainer = styled.div`
     @media screen and (max-width: 770px){
         grid-template-columns: repeat(auto-fill, 32%);
         padding: 2% 5%;
+        
     }
 
     @media screen and (min-width: 770px){
@@ -366,12 +368,11 @@ export const TechImageContainer = styled.div`
     @media screen and (min-width: 1100px){
         grid-template-columns: repeat(auto-fill, 16%);
         padding: 2% 3%;
+        gap: 4%;
     }
 `
 
 export const TechImage = styled.img`
-    margin: 5px 5px;
-    height: 80px;
-
-    
+    margin: 15px 0px;
+    height: 60px;   
 `
