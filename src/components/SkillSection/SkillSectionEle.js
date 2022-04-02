@@ -287,6 +287,7 @@ export const Certilogo = styled.img`
     height: 30%;
     width: 70%;
     object-fit: contain;
+    margin-top: -40px;
 `
 
 export const CTitle = styled.div`
