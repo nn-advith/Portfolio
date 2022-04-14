@@ -61,6 +61,9 @@ export const ColumnWrapper = styled.div`
     height: 40vh;
     flex-direction: column;
     justify-content: right;
+    @media screen and (max-width: 770px){
+        height: 30vh;
+    }
 
 `
 

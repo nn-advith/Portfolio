@@ -37,7 +37,7 @@ export const SidebarContainer = styled.aside`
 
 export const SidebarWrapper = styled.div`
     color: #fff;
-    margin-top: 30px;
+    margin-top: 10px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -45,21 +45,21 @@ export const SidebarWrapper = styled.div`
 `
 
 export const SidebarMenu = styled.ul`
-    display: grid;
-    grid-template-colums: 1fr;
-    grid-template-rows: repeat(6, 80px);
+    display: flex;
+    flex-direction: column;
     text-align: right;
+    height: 60%;
+    justify-content: left;
 
-    @media screen and (max-width: 770px){
-        grid-template-rows: repeat(6, 80px);
-    }
+ 
 `
 
 export const SidebarLink = styled(LinkS)`
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
     font-size: 0.9rem;
+    margin: 20px 0;
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
@@ -102,10 +102,11 @@ export const SideSocialLink = styled.a`
 export const SideResume = styled.div`
     display: flex;
     position: absolute;
-    bottom: 23%;
+    bottom: 20%;
     width:100%;
     justify-content: center;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 
 `
 

@@ -98,7 +98,9 @@ export const AboutInfo = styled.div`
         overflow-x: hidden;
         text-align: right;
         padding-top: 10px;
-        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 2rem;
+        font-size: 1.2rem;
         ${'' /* box-shadow: 0.5px 0px 0 #6702e4; */}
 
    

@@ -12,7 +12,4 @@ export const projectData = [
         tech: ['React', 'Styled Components', 'ThreeJS', 'EmailJS'],
     },
     
-    
-    
-    
 ]

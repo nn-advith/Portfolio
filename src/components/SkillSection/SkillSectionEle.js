@@ -125,7 +125,6 @@ export const SkillGrid = styled.div`
 export const SkillGridItem = styled.div`
     position: relative;
     background-color: transparent;
-    
     padding:10px 20px 50px 0px;
 
     @media screen and (max-width: 770px){
@@ -140,6 +139,9 @@ export const SkillGridItem = styled.div`
         width: 50%;
         height: 100%;
     }
+
+   
+       
 `
 
 export const CertiGridItem = styled.div`
@@ -217,7 +219,7 @@ export const CertiItem = styled.div`
 export const NextLink = styled.div`
     position: absolute;
     background: transparent;
-
+    -webkit-tap-highlight-color: transparent;
     right: 2%;
     top: 55%;
     transform: rotate(90deg);
@@ -254,6 +256,7 @@ export const PrevLink = styled.div`
     right:2%;
     top: 40%;
     transform: rotate(90deg);
+    -webkit-tap-highlight-color: transparent;
 
     @media screen and (max-width: 770px){
         right: 6%;
@@ -349,11 +352,7 @@ export const LangItem = styled.div`
 
 export const TechImageContainer = styled.div`
     width: 100%;
-   
     display: grid;
-
-    gap: 2%;
-    
 
     @media screen and (max-width: 770px){
         grid-template-columns: repeat(auto-fill, 32%);
@@ -368,8 +367,8 @@ export const TechImageContainer = styled.div`
 
     @media screen and (min-width: 1100px){
         grid-template-columns: repeat(auto-fill, 16%);
-        padding: 2% 3%;
-        gap: 4%;
+        padding: 0% 3%;
+        gap: 3%;
     }
 `
 

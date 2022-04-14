@@ -7,12 +7,13 @@ import * as THREE from 'three';
 
 const  AnimatedSphere = (currSection) => {
     //colors
-    // const white = new THREE.Color( 0xffffff );  
-    // const red = new THREE.Color( 0xFF0000 );
-    // const green = new THREE.Color( 0x5DFF00);
-    // const yellow = new THREE.Color( 0xF4D600);
+    const white = new THREE.Color( 0xffffff );  
+    const red = new THREE.Color( 0xFF0000 );
+    const green = new THREE.Color( 0x5DFF00);
+    const yellow = new THREE.Color( 0xF4D600);
     const black = new THREE.Color( 0x000000 );
     const blue = new THREE.Color( 0x1B00FF );
+
     const grey = new THREE.Color( 0x323232);
 
     const [position, setPosition] = useState({x:0, y:-2.5, z:40})

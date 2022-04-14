@@ -10,6 +10,8 @@ import react from '../../images/tech/react.png';
 import node from '../../images/tech/node.png';
 import mongodb from '../../images/tech/mongodb.png';
 import mysql from '../../images/tech/mysql.png';
+import streamlit from '../../images/tech/streamlit.png';
+import axios from '../../images/tech/axios.png';
 
 const SkillSection = ({currSection, active}) => {
 
@@ -55,7 +57,8 @@ const SkillSection = ({currSection, active}) => {
                     <TechImage src={node}/>
                     <TechImage src={mongodb}/>
                     <TechImage src={mysql}/>
-                    
+                    <TechImage src={axios}/>
+                    <TechImage src={streamlit}/>
                 </TechImageContainer>
             </SkillGridItem>
             <CertiGridItem className='ml'>

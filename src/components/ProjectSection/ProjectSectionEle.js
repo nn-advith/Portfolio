@@ -84,7 +84,7 @@ export const ProjectView = styled.div `
 
     .openlink{
         text-decoration:none;
-        height: 300px;
+        height: 250px;
         &:link{
             text-decoration: none;
         }
@@ -135,7 +135,7 @@ export const ProjectView = styled.div `
 
 export const Card = styled.div`
         position:relative;
-        height: 300px;
+        height: 250px;
         margin: 5px 0px;
         background: black;
         overflow:hidden;
@@ -199,7 +199,7 @@ export const Card = styled.div`
                 }
 
                 .cardaccent{
-                    top: 95%;
+                    top: 96%;
                     transition: 0.3s all ease-in-out;
                 }
                 .cardsubhead{
@@ -208,7 +208,7 @@ export const Card = styled.div`
                 }
                 .cardtext{
                     opacity:100%;
-                    top: 60%;
+                    top: 58%;
                     transition: 0.3s all ease-in-out;
                 }
 

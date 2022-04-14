@@ -25,10 +25,11 @@ const Sidebar = ({isOpen, deskMode,  toggle, setSection}) => {
     
             <SidebarWrapper>
               <SidebarMenu>
-                <SidebarLink  onClick={() => {toggle(); setSection(1);}}>1. About</SidebarLink>
-                <SidebarLink  onClick={() => {toggle(); setSection(2);}}>2. Skills</SidebarLink>
-                <SidebarLink  onClick={() => {toggle(); setSection(3);}}>3. Projects</SidebarLink>
-                <SidebarLink  onClick={() => {toggle(); setSection(4);}}>4. Contact Me</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(0);}}>Home</SidebarLink> 
+                <SidebarLink  onClick={() => {toggle(); setSection(1);}}>About</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(2);}}>Skills</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(3);}}>Projects</SidebarLink>
+                <SidebarLink  onClick={() => {toggle(); setSection(4);}}>Contact Me</SidebarLink>
               </SidebarMenu>
             </SidebarWrapper>
             <SideResume>
