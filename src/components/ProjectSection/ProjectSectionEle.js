@@ -153,6 +153,10 @@ export const Card = styled.div`
                 color: #fff;
                 margin-left: 5%;
                 transition: 0.3s all ease-in-out;
+
+                @media screen and (max-width: 770px){
+                    font-size: 1.5rem;
+                }
             }
 
             .cardsubhead{
@@ -176,7 +180,9 @@ export const Card = styled.div`
             
             .cardimg{
                 width: 100%;
-                height: 100%;
+                @media screen and (max-width: 770px){
+                    height: 100%;
+                }
             }
 
             &:before{
@@ -320,7 +326,7 @@ export const ProjectMax = styled.div`
 export const ProjectMaxImg = styled.img`
 
     object-fit:cover;
-    object-position: left;
+    object-position: center;
     @media screen and (max-width: 770px){
         width: 100%;
         height: 50%;
@@ -403,7 +409,7 @@ export const CloseIcon = styled.div`
     div {
         width: 100%;
         height: 0.2rem;
-        background: #fff;
+        background: #6702e4;
         transition: all .1s ease-in-out;
         transform-origin: 8px;
         @media screen and (max-width: 770px){
