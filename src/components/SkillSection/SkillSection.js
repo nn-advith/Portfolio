@@ -57,7 +57,6 @@ const SkillSection = ({currSection, active}) => {
                     <TechImage src={node}/>
                     <TechImage src={mongodb}/>
                     <TechImage src={mysql}/>
-                    <TechImage src={axios}/>
                     <TechImage src={streamlit}/>
                 </TechImageContainer>
             </SkillGridItem>
