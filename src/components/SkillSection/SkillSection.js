@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CertiTitle, SkillContainer, SkillGrid, SkillGridItem, CertiGridItem,  SkillTitle, SkillWrapper, CertiScroll, CertiItem, CertiItemCont, PrevLink, 
-        NextLink, Certilogo, CTitle, CertiLink, Languages, LangItem, TechImageContainer, TechImage } from './SkillSectionEle';
+        NextLink, Certilogo, CTitle, CertiLink, Languages, LangItem, TechImageContainer, TechImage, Slider, SliderTrack, Slide } from './SkillSectionEle';
 import { Certificates } from './Certifications';
 import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md';
 import {FiExternalLink} from 'react-icons/fi';
@@ -52,13 +52,20 @@ const SkillSection = ({currSection, active}) => {
                 </Languages>
                 <br/>
                 <CertiTitle>Worked with</CertiTitle>
-                <TechImageContainer>
-                    <TechImage src={react}/>
-                    <TechImage src={node}/>
-                    <TechImage src={mongodb}/>
-                    <TechImage src={mysql}/>
-                    <TechImage src={streamlit}/>
-                </TechImageContainer>
+                <Slider>
+                    <SliderTrack>
+                        <Slide><TechImage src={react}/></Slide>
+                        <Slide><TechImage src={node}/></Slide>
+                        <Slide><TechImage src={mongodb}/></Slide>
+                        <Slide><TechImage src={mysql}/></Slide>
+                        <Slide><TechImage src={streamlit}/></Slide>
+                        <Slide><TechImage src={react}/></Slide>
+                        <Slide><TechImage src={node}/></Slide>
+                        <Slide><TechImage src={mongodb}/></Slide>
+                        <Slide><TechImage src={mysql}/></Slide>
+                        <Slide><TechImage src={streamlit}/></Slide>
+                    </SliderTrack>
+                </Slider>
             </SkillGridItem>
             <CertiGridItem className='ml'>
                 <CertiTitle>Certificates & Certifications</CertiTitle>

@@ -458,7 +458,7 @@ export const ProjectMaxLink = styled.a`
     color: #fff;
     opacity:30%;
     transition: 0.3s all ease-in-out;
-
+    -webkit-tap-highlight-color: transparent;
 
     
     &:link{

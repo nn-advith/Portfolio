@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fadeIn } from '../Animations/Animations';
+import { fadeIn, scroll } from '../Animations/Animations';
 
 export const SkillContainer = styled.div`
     position: fixed;
@@ -309,7 +309,7 @@ export const CertiLink = styled.a`
     font-size: 1.2rem;
     opacity: 60%;
     transition: 0.3s ease-in-out;
-
+    -webkit-tap-highlight-color: transparent;
     &:hover{
         opacity: 100%;
         transition: 0.3s ease-in-out;
@@ -374,5 +374,50 @@ export const TechImageContainer = styled.div`
 
 export const TechImage = styled.img`
     margin: 15px 0px;
-    height: 60px;   
+    height: 70px;   
+`
+
+export const Slider = styled.div`
+    background: transparent;
+	height: 100px;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 90%;
+    
+  
+    &:before,
+	&:after {
+		background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 40px;
+		z-index: 2;
+	}
+	
+	&:after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&:before {
+		left: 0;
+		top: 0;
+	}
+
+`
+
+
+
+export const SliderTrack = styled.div`
+    animation: ${scroll} 20s linear infinite;
+		display: flex;
+		width: calc(150px * 10);
+`
+
+export const Slide = styled.div`
+        height: 100px;
+		width: 150px;
 `
