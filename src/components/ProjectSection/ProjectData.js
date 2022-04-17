@@ -2,7 +2,7 @@ import img1 from '../../images/projectImages/website.png';
 import img2 from '../../images/projectImages/bclr.png';
 import img3 from '../../images/projectImages/ppdbs.png';
 import img4 from '../../images/projectImages/notes.png';
-
+import img5 from '../../images/projectImages/attendance.png';
 
 export const projectData = [
     {
@@ -43,6 +43,16 @@ export const projectData = [
         desc: 'A simple Google Keep clone MERN stack application built using React and Atlas. CRUD functionality is implemented.',
         link: 'https://keep-react-4585.netlify.app/',
         tech: ['MongoDB Atlas', 'Express', 'React', 'NodeJS'],
+
+    },
+    {
+        id:'p5',
+        name: 'Automatic Attendance System',
+        imgsrc: img5,
+        subhead: 'Face Recognition Project',
+        desc: 'A simple python application which records the attendance of students into a CSV file from an image of the classroom. Faces are converted into an array of encodings of length 128 which are later used for identification in a new image. PyQt5 is used to create a GUI and load images. ',
+        link: 'https://github.com/nn-advith/Attendance-Sytem-Using-Face-Recognition',
+        tech: ['Python', 'face_recognition', 'OpenCV', 'PyQt5'],
 
     },
 ]

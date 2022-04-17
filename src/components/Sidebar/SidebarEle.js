@@ -87,7 +87,7 @@ export const SideSocialMenu = styled.div`
 `
 
 export const SideSocialLink = styled.a`
-    opacity: 20%;
+    opacity: 40%;
     margin: 0 1.5rem;
     color: #fff;
     font-size: 2rem;
@@ -112,7 +112,7 @@ export const SideResume = styled.div`
 
 export const ResumeLink = styled.a`
     color: #fff;
-    opacity: 20%;
+    opacity: 40%;
     transition: 0.3s all ease-in-out;
 
     &:visited{
