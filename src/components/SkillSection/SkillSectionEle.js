@@ -383,28 +383,47 @@ export const Slider = styled.div`
 	margin: auto;
 	overflow:hidden;
 	position: relative;
-	width: 90%;
+	width: 93%;
     
+    .accent{
+        position: absolute;
+		height: 2px;
+        width: 50px;
+		z-index: 2;
+    }
+
+    .p{
+        background: #6702e4;
+        left: 0;
+		top: 0;
+    }
+
+    .w{
+        background: #fff;
+        right: 0;
+		bottom: 0;
+    }
   
     &:before,
 	&:after {
-		background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+		
 		content: "";
 		height: 100px;
 		position: absolute;
-		width: 40px;
+		width: 2px;
 		z-index: 2;
 	}
 	
 	&:after {
 		right: 0;
 		top: 0;
-		transform: rotateZ(180deg);
+        background: #fff;
 	}
 
 	&:before {
 		left: 0;
 		top: 0;
+        background: #6702e4;
 	}
 
 `

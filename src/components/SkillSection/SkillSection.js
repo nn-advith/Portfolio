@@ -53,6 +53,8 @@ const SkillSection = ({currSection, active}) => {
                 <br/>
                 <CertiTitle>Worked with</CertiTitle>
                 <Slider>
+                <div className='accent p'></div>
+                <div className='accent w'></div>
                     <SliderTrack>
                         <Slide><TechImage src={react}/></Slide>
                         <Slide><TechImage src={node}/></Slide>
