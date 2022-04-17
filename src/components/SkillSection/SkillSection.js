@@ -70,7 +70,7 @@ const SkillSection = ({currSection, active}) => {
                 </Slider>
             </SkillGridItem>
             <CertiGridItem className='ml'>
-                <CertiTitle>Certificates & Certifications</CertiTitle>
+                <CertiTitle className='cimp'>Certificates & Certifications</CertiTitle>
                 <CertiScroll>
                     {Certificates.map(cert => (
                         <CertiItemCont id={cert.id} key={cert.id}>

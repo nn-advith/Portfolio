@@ -121,6 +121,7 @@ export const ProjectView = styled.div `
     @media screen and (max-width: 770px){      
         grid-template-columns: repeat(auto-fill, 98%);
         margin-bottom: 80px;
+        gap: 2%;
     }
     @media screen and (min-width: 770px){
         grid-template-columns: repeat(auto-fill, 49%);
@@ -243,6 +244,7 @@ export const ProjectMaxCarousel = styled.div`
     @media screen and (max-width: 770px){
         width: 350px;
         ${'' /* margin-top:10%; */}
+        overflow-x:hidden;
     }
 
     @media screen and (min-width: 770px){

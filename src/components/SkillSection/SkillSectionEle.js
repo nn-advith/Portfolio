@@ -154,6 +154,10 @@ export const CertiGridItem = styled.div`
     ${'' /* justify-content: center; */}
     padding: 0 20px;
     border-left: 2px solid #6702e4;
+
+    .cimp {
+        padding-left: 20px;
+    }
     
     @media screen and (max-width: 770px){
         width: 100%;
@@ -180,6 +184,9 @@ export const CertiTitle = styled.div`
     letter-spacing: 1px;
     padding: 20px 20px;
 
+    @media screen and (max-width: 1100px){
+        padding-left: 0px;
+    }
    
 `
 
@@ -325,7 +332,7 @@ export const Languages = styled.div`
 
     @media screen and (max-width: 770px){
         grid-template-columns: repeat(auto-fill, 32%);
-        padding: 2% 5%;
+        padding: 2% 0;
         margin-bottom: 20px;
     }
 
@@ -374,7 +381,7 @@ export const TechImageContainer = styled.div`
 
 export const TechImage = styled.img`
     margin: 15px 0px;
-    height: 70px;   
+    height: 60px;   
 `
 
 export const Slider = styled.div`
@@ -426,17 +433,25 @@ export const Slider = styled.div`
         background: #6702e4;
 	}
 
+    @media screen and (max-width: 1100px){
+
+        width: 100%;
+    }
+
 `
 
 
 
 export const SliderTrack = styled.div`
     animation: ${scroll} 20s linear infinite;
-		display: flex;
-		width: calc(150px * 10);
+    display: flex;
+    width: calc(150px * 10);
+    
 `
 
 export const Slide = styled.div`
         height: 100px;
 		width: 150px;
+        display: flex;
+        align-items: center;
 `
