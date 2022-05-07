@@ -177,28 +177,111 @@ export const ContactText = styled.div`
     
 `
 
-export const ContactButton = styled.button`
-    width: 80px;
-    height: 35px;
+// export const ContactButton = styled.button`
+//     width: 80px;
+//     height: 35px;
 
-    border-radius: 20px;
+//     border-radius: 20px;
 
-    border: none;
-    background: #6702e4;
-    font-size: 0.8rem;
-    text-align:center;
+//     border: none;
+//     background: #6702e4;
+//     font-size: 0.8rem;
+//     text-align:center;
+//     margin: 5% 0;
+//     transition: 0.3s all ease-in-out;
+//     line-height: 20px;
+
+
+//     &:hover{
+//         background: #fff;
+//         color: #000;
+//         transition: 0.3s all ease-in-out;
+
+//     }
+
+// `
+
+
+export const ContactButton = styled.div`
+    width: 150px;
+    position: relative;
+    height: 50px;
+    background: transparent;
+    padding: 7px;
     margin: 5% 0;
-    transition: 0.3s all ease-in-out;
-    line-height: 20px;
 
-
-    &:hover{
-        background: #fff;
-        color: #000;
-        transition: 0.3s all ease-in-out;
-
+    .but{
+        position: relative;
+  width: 100%;
+  height: 100%;
+  background: #6702e4;
+  overflow: hidden;
     }
 
+    .border{
+        position: absolute;
+  width: 100%;
+  height: 20px;
+  left: 0px;
+  border: 0.2px solid #444;
+    }
+
+    .t{
+        top: 0px;
+  border-bottom: none;
+    }
+
+    .b{
+        bottom: 0px;
+  border-top: none;
+    }
+
+    .slide{
+        position: absolute;
+  left: -350px;
+  width: 120%;
+  height: 100%;
+  background: #222;
+  transform: skew(-10deg);
+  transition: 0.4s ease-in-out;
+    }
+
+    .text{
+
+        text-align: center;
+  line-height: 35px;
+  font-size: 0.8rem;
+  top: 0; 
+left: -65px;   
+  letter-spacing: 1.6px;
+  font-weight: 400;
+  position: absolute;
+        width: 100%;
+  color: #fff;
+  z-index:10;
+    }
+
+    .dot{
+        position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background: #222;
+  transition: 0.4s ease-in-out;
+    }
+
+    &:hover{
+        .slide{
+            left: -10px;
+            transition: 0.4s ease-in-out;
+        }
+
+        .dot{
+            background: #fff;
+            transition: 0.4s ease-in-out;
+        }
+    }
 `
 
 export const ContactError = styled.div`

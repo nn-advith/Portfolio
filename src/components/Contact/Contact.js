@@ -64,7 +64,15 @@ const Contact = ({currSection, active}) => {
                             <ContactInput placeholder='Email' type='email' name='email'/>
                             <ContactInput placeholder='Message' type='text' name='message'/>
                             
-                            <ContactButton>Submit</ContactButton>
+                            <ContactButton>
+                                <div className='border t'></div>
+                                <div className='but'>
+                                    <div className='text'>Submit</div>
+                                    <div className='slide'></div>
+                                    {/* <div className='dot'></div> */}
+                                </div>
+                                <div className='border b'></div>
+                            </ContactButton>
                         </ContactForm>
                     </Column2>
                 </ContactRow>
