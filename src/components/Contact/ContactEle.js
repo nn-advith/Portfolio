@@ -177,32 +177,8 @@ export const ContactText = styled.div`
     
 `
 
-// export const ContactButton = styled.button`
-//     width: 80px;
-//     height: 35px;
 
-//     border-radius: 20px;
-
-//     border: none;
-//     background: #6702e4;
-//     font-size: 0.8rem;
-//     text-align:center;
-//     margin: 5% 0;
-//     transition: 0.3s all ease-in-out;
-//     line-height: 20px;
-
-
-//     &:hover{
-//         background: #fff;
-//         color: #000;
-//         transition: 0.3s all ease-in-out;
-
-//     }
-
-// `
-
-
-export const ContactButton = styled.div`
+export const ContactButton = styled.button`
     width: 150px;
     position: relative;
     height: 50px;
