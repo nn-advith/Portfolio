@@ -170,6 +170,7 @@ export const ContactText = styled.div`
     justify-content: space-around;
     transition: 0.3s all ease;
 
+
     @media screen and (max-width: 770px){
         width: 60%;
         transition: 0.3s all ease
@@ -185,6 +186,8 @@ export const ContactButton = styled.button`
     background: transparent;
     padding: 7px;
     margin: 5% 0;
+    border:none;
+    outline: none;
 
     .but{
         position: relative;
@@ -219,7 +222,7 @@ export const ContactButton = styled.button`
   height: 100%;
   background: #222;
   transform: skew(-10deg);
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
     }
 
     .text{
@@ -244,7 +247,7 @@ left: -65px;
   width: 4px;
   height: 4px;
   background: #222;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
     }
 
     &:hover{
