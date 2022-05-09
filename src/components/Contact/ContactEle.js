@@ -188,66 +188,66 @@ export const ContactButton = styled.button`
     margin: 5% 0;
     border:none;
     outline: none;
+    cursor: pointer;
 
     .but{
         position: relative;
-  width: 100%;
-  height: 100%;
-  background: #6702e4;
-  overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: #6702e4;
+        overflow: hidden;
     }
 
     .border{
         position: absolute;
-  width: 100%;
-  height: 20px;
-  left: 0px;
-  border: 0.2px solid #444;
+        width: 100%;
+        height: 20px;
+        left: 0px;
+        border: 0.2px solid #444;
     }
 
     .t{
         top: 0px;
-  border-bottom: none;
+        border-bottom: none;
     }
 
     .b{
         bottom: 0px;
-  border-top: none;
+        border-top: none;
     }
 
     .slide{
         position: absolute;
-  left: -350px;
-  width: 120%;
-  height: 100%;
-  background: #222;
-  transform: skew(-10deg);
-  transition: 0.5s ease-in-out;
+        left: -350px;
+        width: 120%;
+        height: 100%;
+        background: #222;
+        transform: skew(-10deg);
+        transition: 0.5s ease-in-out;
     }
 
     .text{
-
         text-align: center;
-  line-height: 35px;
-  font-size: 0.8rem;
-  top: 0; 
-left: -65px;   
-  letter-spacing: 1.6px;
-  font-weight: 400;
-  position: absolute;
+        line-height: 35px;
+        font-size: 0.8rem;
+        top: 0; 
+        left: -65px;   
+        letter-spacing: 1.6px;
+        font-weight: 400;
+        position: absolute;
         width: 100%;
-  color: #fff;
-  z-index:10;
+        color: #fff;
+        z-index:10;
     }
 
     .dot{
         position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 4px;
-  height: 4px;
-  background: #222;
-  transition: 0.5s ease-in-out;
+        right: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background: #222;
+        transition: 0.5s ease-in-out;
     }
 
     &:hover{

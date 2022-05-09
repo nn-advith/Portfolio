@@ -264,7 +264,7 @@ export const AboutPic = styled.div`
         .aboutimg{
             width: 100%;
             height: 100%;
-            border-radius: 6px;
+            ${'' /* border-radius: 6px; */}
             mix-blend-mode: multiply;
             filter: grayscale(100%) contrast(1);
             transition: 0.3s all ease-in-out;
@@ -279,7 +279,7 @@ export const AboutPic = styled.div`
             top: 6px;
             left: 10px;
             z-index: -1;
-            border-radius:6px;
+            ${'' /* border-radius:6px; */}
             border: 1px solid white;
             transition: 0.3s all ease-in-out;
 
@@ -293,7 +293,7 @@ export const AboutPic = styled.div`
             height: 98%;
             top: 0px;
             background-color: #6702e4;
-            border-radius: 6px;
+            ${'' /* border-radius: 6px; */}
             opacity: 0.4;
             mix-blend-mode: screen;
             transition: 0.3s all ease-in-out;

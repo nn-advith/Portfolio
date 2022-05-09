@@ -44,11 +44,11 @@ const SkillSection = ({currSection, active}) => {
             <SkillGridItem className='mr'>
             <CertiTitle>Languages</CertiTitle>
                 <Languages>
-                    <LangItem>HTML</LangItem>
-                    <LangItem>CSS</LangItem>
-                    <LangItem>JavaScript</LangItem>
-                    <LangItem>Python</LangItem>
-                    <LangItem>C++</LangItem>    
+                    <LangItem>HTML<div className='dot'></div></LangItem>
+                    <LangItem>CSS<div className='dot'></div></LangItem>
+                    <LangItem>JavaScript<div className='dot'></div></LangItem>
+                    <LangItem>Python<div className='dot'></div></LangItem>
+                    <LangItem>C++<div className='dot'></div></LangItem>    
                 </Languages>
                 <br/>
                 <CertiTitle>Worked with</CertiTitle>

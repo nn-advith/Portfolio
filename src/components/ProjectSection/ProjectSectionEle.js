@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-    fadeIn
+    fadeIn, popStay, popUp
 } from '../Animations/Animations';
 
 
@@ -140,6 +140,12 @@ export const Card = styled.div`
         margin: 5px 0px;
         background: black;
         overflow:hidden;
+        opacity: 0%;
+        animation: ${({visited , active}) => (visited[active] === 0 ? 'none' : popUp)};
+        ${'' /* animation-delay: ${({visited , active}) => (visited[active] === 0 ? '1s': '0s')}; */}
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
 
         .wrapper{
             width: 100%;
@@ -147,12 +153,14 @@ export const Card = styled.div`
 
             .cardtext{
                 position:absolute;
-                top:40%;
-                opacity: 0%;
+                top: 58%;
+                ${'' /* opacity: 0%; */}
                 font-size: 2rem;
                 width: 100%;
                 color: #fff;
                 margin-left: 5%;
+                z-index: 2;
+                left: -100%;
                 transition: 0.3s all ease-in-out;
 
                 @media screen and (max-width: 770px){
@@ -162,21 +170,41 @@ export const Card = styled.div`
 
             .cardsubhead{
                 position:absolute;
-                top:100%;
+                top: 78%;
                 opacity: 100%;
+                left: -100%;
                 font-size: 0.9rem;
                 width: 100%;
                 color: #6702e4;
                 margin-left: 5%;
+                z-index: 2;
                 transition: 0.3s all ease-in-out;
             }
 
             .cardaccent{
-                width: 100%;
-                height: 5%;
+                width: 130%;
+                height: 100%;
                 position: absolute;
-                top:100%;
-                background-color: white;
+                top:0%;
+                left: -170%;
+                z-index: 1;
+                background-color: #111;
+                transform: skew(-10deg);
+                transition: 0.4s all ease-in-out;
+                
+            }
+
+            .cardaccent2{
+                width: 130%;
+                height: 100%;
+                position: absolute;
+                top:0%;
+                left: -150%;
+                z-index: 0;
+                background-color: #6702e4;
+                transform: skew(-10deg);
+                transition: 0.4s all ease-in-out;
+
             }
             
             .cardimg{
@@ -186,36 +214,29 @@ export const Card = styled.div`
                 }
             }
 
-            &:before{
-                display:block;
-                top:0px;
-                background: black;
-                position:absolute;
-                content: '';
-                width: 100%;
-                height: 100%;
-                opacity: 0%;
-                transition: 0.3s all ease-in-out;
-            }
 
             &:hover, &:focus{
                 
-                &:before{
+                ${'' /* &:before{
                     opacity: 85%;
                     transition: 0.3s all ease-in-out;
-                }
+                } */}
 
                 .cardaccent{
-                    top: 96%;
-                    transition: 0.3s all ease-in-out;
+                    left: -10%;
+                    transition: 0.4s all ease-in-out;
+                }
+                .cardaccent2{
+                    left: 10%;
+                    transition: 0.4s all ease-in-out;
                 }
                 .cardsubhead{
-                    top: 78%;
+                    left: 0%;
                     transition: 0.3s all ease-in-out;
                 }
                 .cardtext{
-                    opacity:100%;
-                    top: 58%;
+               
+                    left: 0%;
                     transition: 0.3s all ease-in-out;
                 }
 

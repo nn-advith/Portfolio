@@ -20,11 +20,24 @@ import SkillSection from './components/SkillSection/SkillSection';
 
 const App = () => {
 
+  function sleep(mss) {  
+    return new Promise(resolve => setTimeout(resolve, mss));  
+ } 
+
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false)
   const [deskMode, setdeskMode] = useState(window.innerWidth<768 ? false:true);
-  const [currSection, setCurrSection ] = useState(0);
-
+  const [currSection, setCurr ] = useState(0);
+  const [visited, setVisited] = useState([0,0,0,0,0])  
+  
+  const setCurrSection = async(i) => {
+    setCurr(i);
+    var a = visited;
+    a[i] = 1;
+    await sleep(1000);
+    setVisited(a)
+  
+  }
 
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -82,7 +95,7 @@ const App = () => {
       <HeroSection currSection={currSection} active={0}/>
       <AboutSection currSection={currSection} active={1} />
       <SkillSection currSection={currSection} active={2} />
-      <ProjectSection currSection={currSection} active={3} />
+      <ProjectSection currSection={currSection} active={3} visited={visited}/>
       <Resume setCurrSection={setCurrSection}/>
       <Contact currSection={currSection} active={4}/>
  

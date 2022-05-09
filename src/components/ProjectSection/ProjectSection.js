@@ -9,7 +9,7 @@ import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md';
 
 
 
-const ProjectSection = ({currSection, active}) => {
+const ProjectSection = ({currSection, active, visited}) => {
 
     const pdiv = useRef();
 
@@ -56,7 +56,7 @@ const ProjectSection = ({currSection, active}) => {
                 <ProjectView ref={pdiv}>
                 {projectData.map(data => (
                     <a href={`#`+data.id} key={data.id} className="openlink">
-                    <Card onClick={() => {changeOpen(); changeScroll()}}>
+                    <Card onClick={() => {changeOpen(); changeScroll()}} visited={visited} active={active}>
                         <div className='wrapper'>
                         <div className='cardtext'>
                             {data.name}
@@ -65,6 +65,7 @@ const ProjectSection = ({currSection, active}) => {
                             {data.subhead}
                         </div>
                         <div className='cardaccent'></div>
+                        <div className='cardaccent2'></div>
                         <img className='cardimg' src={data.imgsrc}/>
                         </div>
                         

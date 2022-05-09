@@ -340,10 +340,10 @@ export const Languages = styled.div`
 `
 
 export const LangItem = styled.div`
-        background: #eee;
+        background: #6702e4;
         margin: 7px 0px;
-        color: #6702e4;
-        border-radius: 15px;
+        color: #fff;
+        position: relative;
         text-align: center;
         line-height: 25px;
         font-size: 0.8rem;
@@ -351,10 +351,15 @@ export const LangItem = styled.div`
         height: 27px;
         transition: 0.3s ease-in-out;
 
-    &:hover{
-        background: #9742ff;
-        color: #000;
-    }
+        .dot{
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            right: 0;
+            bottom: 0;
+            background: #aaa;
+        }
+
 `
 
 export const TechImageContainer = styled.div`
