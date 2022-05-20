@@ -19,22 +19,47 @@ export const scroll = keyframes`
 
 export const popUp = keyframes`
     0%{
-        transform: translateY(100px);
+        transform: translateX(-100px);
         opacity: 0%
     }
     100%{
-        transform: translateY(0);
-        opacity: 100%
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+`
+
+export const fadeinout = keyframes`
+    0%{
+        transform: translateX(0px);
+        opacity: 0%;
+    }
+    99%{
+        transform: translateX(800%);
+        opacity: 100%;
+    }
+    
+    100%{
+        transform: translateX(800%);
+        opacity: 0%;
     }
 `
 
 export const popStay = keyframes`
     0%{
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 100%;
     }
     100%{
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 100%;
+    }
+`
+
+export const wrapperLR = keyframes`
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(120%);
     }
 `

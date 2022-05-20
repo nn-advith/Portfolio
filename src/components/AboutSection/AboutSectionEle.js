@@ -290,7 +290,7 @@ export const AboutPic = styled.div`
             content:'';
             display: block;
             width: 100%;
-            height: 98%;
+            height: 99%;
             top: 0px;
             background-color: #6702e4;
             ${'' /* border-radius: 6px; */}

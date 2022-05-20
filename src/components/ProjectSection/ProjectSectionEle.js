@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-    fadeIn, popStay, popUp
+    fadeIn, fadeinout, popStay, popUp
 } from '../Animations/Animations';
 
 
@@ -53,7 +53,29 @@ export const ProjectSectionWrapper = styled.div `
 
 export const ProjectTitle = styled.div `
     color: #000;
+    opacity: 0%;
+    overflow: hidden;
+    height: 100px;
+    animation: ${({visited, active}) => (visited[active] === 0 ? 'none': popUp)};
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    width: 200px;
     
+    .accent{
+        position:absolute;
+        width: 25px;
+        background: black;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation: ${({visited, active}) => (visited[active] === 0 ? 'none': fadeinout)};
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    }
+
     font-weight: 700;
     transition: 0.3s ease-in-out;
 
@@ -144,7 +166,7 @@ export const Card = styled.div`
         animation: ${({visited , active}) => (visited[active] === 0 ? 'none' : popUp)};
         ${'' /* animation-delay: ${({visited , active}) => (visited[active] === 0 ? '1s': '0s')}; */}
         animation-delay: 1s;
-        animation-duration: 0.5s;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
 
         .wrapper{

@@ -92,7 +92,7 @@ const App = () => {
       <HamIcon2 toggle={toggle} isOpen={isOpen}/>
       <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
       <Sidesocial />
-      <HeroSection currSection={currSection} active={0}/>
+      <HeroSection currSection={currSection} active={0} visited={visited}/>
       <AboutSection currSection={currSection} active={1} />
       <SkillSection currSection={currSection} active={2} />
       <ProjectSection currSection={currSection} active={3} visited={visited}/>

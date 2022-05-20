@@ -50,8 +50,9 @@ const ProjectSection = ({currSection, active, visited}) => {
         <ProjectContainer currSection={currSection} active={active} >
             <ProjectMask po={po}/>
             <ProjectSectionWrapper>
-                <ProjectTitle>
+                <ProjectTitle visited={visited} active={active}>
                     Projects.
+                    <div className='accent'></div>
                 </ProjectTitle>
                 <ProjectView ref={pdiv}>
                 {projectData.map(data => (
