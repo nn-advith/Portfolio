@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fadeIn } from '../Animations/Animations';
+import { fadeIn, popUp,popStay, fadeinout,popUp2 , fadeinout2} from '../Animations/Animations';
 
 
 export const AboutContainer = styled.div`
@@ -22,7 +22,6 @@ export const AboutRow = styled.div`
     margin-top: 10%;
     display: grid;
     align-items: center;
- 
     grid-template-areas: 'col1 col2';
     background: transparent;
     height: 85%;
@@ -60,14 +59,17 @@ export const AboutRow = styled.div`
 
 export const Column1 = styled.div`
     margin-bottom: 15px;
-    padding: 0 15px;
+    padding: 0 0px 0 15px;
     grid-area: col1;
+    overflow: hidden;
+    border-right: 1px solid #6702e4;
 
 `
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
+    overflow: hidden;
 
 `
 
@@ -76,10 +78,15 @@ export const AboutInfo = styled.div`
     padding:5px 20px;
     text-align: right;
     letter-spacing: 0.5px;
-    opacity: 0.8;
+    
     display: flex;
     flex-direction: column;
     justify-content: right;
+    opacity: 0%;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
    
    
     @media screen and (max-width: 770px){
@@ -157,7 +164,7 @@ export const AboutInfoLine = styled.div`
 
 export const AboutHeading = styled.div`
     display: flex;
- 
+    opacity: 0%;
     position: absolute;
     justify-content: left;
     align-items:center;
@@ -167,9 +174,41 @@ export const AboutHeading = styled.div`
     transition: 0.2s all ease-in-out;
     letter-spacing: 1px;
     font-weight:700;
-    opacity: 100%;
+
     padding-left: 5px;
     text-align:left;
+    overflow: hidden;
+    height: 100px;
+    animation: ${({visited, active}) => (visited[active] === 0 ? 'none': popUp)};
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    .wrapper{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        animation: ${({visited, active}) => (visited[active] === 0 ?  'none': fadeinout)};
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        .accent{
+        position:absolute;
+        width: 25px;
+        background: #6702e4;
+        height: 100%;
+        top: 0;
+        left: 0;
+        ${'' /* opacity: 0; */}
+        animation: ${({visited, active}) => (visited[active] === 0 ? 'none': fadeinout2)};
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        }
+
+    }
 
  
     @media screen and (max-width: 770px){
@@ -206,6 +245,11 @@ export const AboutHeading = styled.div`
 export const AboutImgWrap = styled.div`
     display: flex;
     padding-bottom: 40px;
+    opacity: 0%;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
     @media screen and (max-width: 1100px){
         justify-content: center;
         padding-bottom: 50px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-    fadeIn, fadeinout, popStay, popUp
+    fadeIn, fadeinout, popStay, popUp,  fadeinout2
 } from '../Animations/Animations';
 
 
@@ -55,27 +55,42 @@ export const ProjectTitle = styled.div `
     color: #000;
     opacity: 0%;
     overflow: hidden;
-    height: 100px;
+    margin-top: 20px;
+padding-bottom: 20px;
     animation: ${({visited, active}) => (visited[active] === 0 ? 'none': popUp)};
     animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     width: 200px;
-    
-    .accent{
+    position: relative;
+
+    .wrapper{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        animation: ${({visited, active}) => (visited[active] === 0 ?  'none': fadeinout)};
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        .accent{
         position:absolute;
         width: 25px;
         background: black;
         height: 100%;
         top: 0;
         left: 0;
-        opacity: 0;
-        animation: ${({visited, active}) => (visited[active] === 0 ? 'none': fadeinout)};
+        ${'' /* opacity: 0; */}
+        animation: ${({visited, active}) => (visited[active] === 0 ? 'none': fadeinout2)};
     animation-delay: 1s;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     }
 
+    }
+    
+  
     font-weight: 700;
     transition: 0.3s ease-in-out;
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fadeIn, scroll } from '../Animations/Animations';
+import { fadeIn, scroll, popStay, popUp, popUp2, fadeinout, fadeinout2 } from '../Animations/Animations';
 
 export const SkillContainer = styled.div`
     position: fixed;
@@ -42,7 +42,44 @@ export const SkillWrapper = styled.div `
 export const SkillTitle = styled.div `
 
     font-weight: 700;
+    opacity: 0%;
     transition: 0.3s ease-in-out;
+    overflow: hidden;
+    width: 150px;
+    position: relative;
+    ${'' /* height: 100px; */}
+    animation: ${({visited, active}) => (visited[active] === 0 ? 'none': popUp)};
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+    .wrapper{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 100%;
+        animation: ${({visited, active}) => (visited[active] === 0 ?  'none': fadeinout)};
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        .accent{
+        position:absolute;
+        width: 25px;
+        background: #6702e4;
+        height: 100%;
+        top: 0;
+        left: 0;
+        ${'' /* opacity: 0; */}
+        animation: ${({visited, active}) => (visited[active] === 0 ? 'none': fadeinout2)};
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        }
+
+    }
+
+
 
     @media screen and (max-width: 770px){
         font-size: 1.5rem;
@@ -63,11 +100,50 @@ export const SkillTitle = styled.div `
     
     
 `
+export const Column1 = styled.div`
+width: 100%;
+    overflow: hidden;
+
+    grid-area: col1;
+    @media screen and (max-width: 770px){
+        padding-top: 100px;
+    }
+
+    @media screen and (min-width: 770px){
+        padding-top: 200px;
+    }
+
+    @media screen and (min-width: 1100px){
+        padding-top: 0px;
+    }
+
+`
+
+export const Column2 = styled.div`
+width: 100%;
+    overflow: hidden;
+    grid-area: col2;
+    border-left: 2px solid #6702e4;
+
+    @media screen and (max-width: 770px){
+        padding-top: 200px;
+    }
+
+    @media screen and (min-width: 770px){
+        padding-top: 400px;
+    }
+
+    @media screen and (min-width: 1100px){
+        padding-top: 0px;
+    }
+
+`
 
 export const SkillGrid = styled.div`
     width: 100%;
     height: 70%;
-    display: flex;
+    display: grid;
+    grid-template-areas: 'col1 col2';
     
 
     .ml{
@@ -102,6 +178,9 @@ export const SkillGrid = styled.div`
         overflow-x : hidden;
         height: 80%;
         padding-bottom: 30px;
+        grid-auto-columns: 1fr 1fr;
+        padding-bottom: 1%;
+        grid-template-areas: 'col1' 'col2';
     }
 
     @media screen and (min-width: 770px){
@@ -110,7 +189,10 @@ export const SkillGrid = styled.div`
         overflow-y : scroll;
         overflow-x : hidden;
         height: 80%;
-        padding-bottom: 30px;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas: 'col1' 'col2';
+        padding-bottom: 10%;
+
     }
 
     @media screen and (min-width: 1100px){
@@ -118,25 +200,34 @@ export const SkillGrid = styled.div`
         overflow-y : hidden;
         overflow-x : hidden;
         height: 60%;
-        margin-top: 50px;   
+        padding-top: 50px;
+        margin-top: 50px;
+        grid-auto-columns: 1fr 1fr;
+        grid-template-areas: 'col1 col2'; 
     }
 `
 
 export const SkillGridItem = styled.div`
     position: relative;
     background-color: transparent;
-    padding:10px 20px 50px 0px;
+    padding:0px 20px 50px 0px;
+    opacity: 0%;
+    overflow: hidden;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 
     @media screen and (max-width: 770px){
         width: 100%;
     }
 
     @media screen and (min-width: 770px){
-        width: 80%;    
+        width: 100%;    
     }
 
     @media screen and (min-width: 1100px){
-        width: 50%;
+        width: 100%;
         height: 100%;
     }
 
@@ -152,8 +243,13 @@ export const CertiGridItem = styled.div`
     display: flex;
     flex-direction: column;
     ${'' /* justify-content: center; */}
-    padding: 0 20px;
-    border-left: 2px solid #6702e4;
+    padding: 10px 20px;
+
+    opacity: 0%;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 
     .cimp {
         padding-left: 20px;
@@ -166,13 +262,13 @@ export const CertiGridItem = styled.div`
     }
 
     @media screen and (min-width: 770px){
-        width: 80%;
+        width: 100%;
         margin-top: 30px;
         padding: 0px;
     }
 
     @media screen and (min-width: 1100px){
-        width: 50%;
+        width: 100%;
     }
     
 `
@@ -192,7 +288,7 @@ export const CertiTitle = styled.div`
 
 export const CertiScroll = styled.div`
     width: 100%;
-    height: 400px;
+    height: 350px;
     display: grid;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -206,7 +302,7 @@ export const CertiScroll = styled.div`
 export const CertiItemCont = styled.div`
    
     width: 90%;
-    height: 400px;
+    height: 350px;
     scroll-snap-align: start;
     background: #111;
     margin: 0 20px;
@@ -214,7 +310,7 @@ export const CertiItemCont = styled.div`
 `
 
 export const CertiItem = styled.div`
-    height: 400px;
+    height: 350px;
     display: flex;
     width: 100%;
     flex-direction: column;

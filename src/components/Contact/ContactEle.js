@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {fadeIn} from '../Animations/Animations';
+import {fadeIn,  popUp,popStay, fadeinout,popUp2 , fadeinout2} from '../Animations/Animations';
 
 export const ContactContainer = styled.div`
     position: absolute;
@@ -46,13 +46,15 @@ export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col1;
-    border-right: 1px solid #6702e4;
+    border-right: 2px solid #6702e4;
+    overflow: hidden;
 
 `
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
+    overflow: hidden;
 `
 
 export const ColumnWrapper = styled.div`
@@ -61,6 +63,11 @@ export const ColumnWrapper = styled.div`
     height: 40vh;
     flex-direction: column;
     justify-content: right;
+    opacity: 0%;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
     @media screen and (max-width: 770px){
         height: 30vh;
     }
@@ -133,6 +140,11 @@ export const ContactForm = styled.form`
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
+    opacity: 0%;
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 `
 
 export const ContactInput = styled.input`

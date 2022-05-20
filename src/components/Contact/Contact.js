@@ -6,7 +6,7 @@ import { Column1, Column2,ContactRow, ContactContainer, ContactWrapper, ContactT
 
 const {REACT_APP_SERVICE_ID,REACT_APP_TEMPLATE_ID,REACT_APP_USER_ID} = process.env;
 
-const Contact = ({currSection, active}) => {
+const Contact = ({currSection, active, visited}) => {
 
     const form = useRef();
     const [error, setError] = useState(false);
@@ -45,7 +45,7 @@ const Contact = ({currSection, active}) => {
             <ContactWrapper>
                 <ContactRow>
                     <Column1>
-                        <ColumnWrapper>
+                        <ColumnWrapper visited={visited} active={active}>
                             <ContactText1>
                                 Contact Me
                             </ContactText1>
@@ -59,7 +59,7 @@ const Contact = ({currSection, active}) => {
                         </ColumnWrapper>
                     </Column1>
                     <Column2>
-                        <ContactForm ref={form} autoComplete='off' onSubmit={sendEmail}>
+                        <ContactForm ref={form} autoComplete='off' onSubmit={sendEmail}  visited={visited} active={active}>
                             <ContactInput placeholder='Name' type='text' name='name'/ >
                             <ContactInput placeholder='Email' type='email' name='email'/>
                             <ContactInput placeholder='Message' type='text' name='message'/>

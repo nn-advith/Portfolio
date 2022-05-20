@@ -2,17 +2,17 @@ import React from 'react';
 import { AboutContainer, AboutHeading,AboutPic, AboutImgWrap,  AboutInfo, AboutRow, Column1, Column2, AboutInfoLine, TimeLineItem, TimeLineHeading, TimeLineText } from './AboutSectionEle';
 import photo from '../../images/me.png';
 
-const AboutSection = ({currSection, active}) => {
+const AboutSection = ({currSection, active, visited}) => {
   return (
     <>
         <AboutContainer currSection={currSection} active={active}>
-          <AboutHeading>
-          About Me.
+          <AboutHeading visited={visited} active={active}>
+          About Me.<div className='wrapper'><div className='accent'></div></div>
         </AboutHeading>
             <AboutRow>
           
               <Column1>
-                <AboutInfo>
+                <AboutInfo visited={visited} active={active}>
                 Hello! My name is Advith and I like to build things for the web. I grew interested in web development after seeing some amazing websites built by talented people. I'm currently studying Computer Science and Engineering and working towards my Bachelor's degree. My current hobbies include video games and watching anime.  
                 <br />
                 <br />
@@ -51,7 +51,7 @@ const AboutSection = ({currSection, active}) => {
                 </AboutInfo>
               </Column1>
               <Column2>
-              <AboutImgWrap >
+              <AboutImgWrap visited={visited} active={active} >
               <AboutPic>
                 <div className='wrapper'>
                   <img className='aboutimg' src={photo}/>

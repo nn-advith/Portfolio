@@ -52,7 +52,7 @@ const ProjectSection = ({currSection, active, visited}) => {
             <ProjectSectionWrapper>
                 <ProjectTitle visited={visited} active={active}>
                     Projects.
-                    <div className='accent'></div>
+                    <div className='wrapper'><div className='accent'></div></div>
                 </ProjectTitle>
                 <ProjectView ref={pdiv}>
                 {projectData.map(data => (

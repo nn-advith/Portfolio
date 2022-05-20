@@ -10,7 +10,7 @@ const HeroSection = ({currSection, active, visited}) => {
     <>
     <HeroContainer currSection={currSection} active={active}>
     <HeroWrapper visited={visited} active={active}>
-      <Wrapper visited={visited} active={active}><Acc c={w}></Acc></Wrapper>
+      {/* <Wrapper visited={visited} active={active}><Acc c={w}></Acc></Wrapper> */}
        <HeroText1 >Hi, my name is </HeroText1>
        <HeroText2 >N N Advith.</HeroText2>
        <HeroText3 >I'm a programmer.</HeroText3>

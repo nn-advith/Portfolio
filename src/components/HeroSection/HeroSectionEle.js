@@ -28,7 +28,7 @@ export const HeroWrapper =  styled.div`
     padding-top: 50px;
     animation: ${({visited, active}) => (visited[active] === 0 ? popUp: popStay)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '1s': '0s')};
-    overflow: hidden;
+
     height: auto;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
@@ -164,17 +164,6 @@ export const HeroText4 = styled.div`
     padding-bottom: 25px;
     text-align:left;
 
-    ${'' /* position: relative;
-    overflow:hidden;
-    opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popUp: 'none')};
-    animation-delay: 1s;
-    animation-duration: 0.8s;
-    animation-fill-mode: forwards; */}
-
-
-
-
     @media screen and (max-width: 770px){
         font-size: 0.8rem;
         height:1.4rem;
@@ -198,24 +187,24 @@ export const HeroText4 = styled.div`
     }
 `
 
-export const Wrapper = styled.div`
-position: absolute;
-    width: 100%;
-    background: transparent;
-    z-index: 10;
-    left: -50px;
-    height: 100%;
-    animation-name: ${({visited, active}) => (visited[active] === 0 ? wrapperLR: 'none')};
-    animation-duration: 1.3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-`
+// export const Wrapper = styled.div`
+// position: absolute;
+//     width: 100%;
+//     background: transparent;
+//     z-index: 10;
+//     left: -50px;
+//     height: 100%;
+//     animation-name: ${({visited, active}) => (visited[active] === 0 ? wrapperLR: 'none')};
+//     animation-duration: 1.3s;
+//     animation-delay: 1s;
+//     animation-fill-mode: forwards;
+// `
 
-export const Acc = styled.div`
-    position: absolute;
-    width: 20px;
-    height: inherit;
-    background-color:${({c}) => c === 'p' ? '#6702e4': '#ffffff' };
+// export const Acc = styled.div`
+//     position: absolute;
+//     width: 20px;
+//     height: inherit;
+//     background-color:${({c}) => c === 'p' ? '#6702e4': '#ffffff' };
 
     
-`
+// `

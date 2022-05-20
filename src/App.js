@@ -93,11 +93,11 @@ const App = () => {
       <Sidebar isOpen={isOpen} deskMode={deskMode} toggle={toggle} setSection={setCurrSection} />
       <Sidesocial />
       <HeroSection currSection={currSection} active={0} visited={visited}/>
-      <AboutSection currSection={currSection} active={1} />
-      <SkillSection currSection={currSection} active={2} />
+      <AboutSection currSection={currSection} active={1} visited={visited}/>
+      <SkillSection currSection={currSection} active={2} visited={visited}/>
       <ProjectSection currSection={currSection} active={3} visited={visited}/>
       <Resume setCurrSection={setCurrSection}/>
-      <Contact currSection={currSection} active={4}/>
+      <Contact currSection={currSection} active={4} visited={visited}/>
  
 
 

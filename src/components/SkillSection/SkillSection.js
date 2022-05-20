@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CertiTitle, SkillContainer, SkillGrid, SkillGridItem, CertiGridItem,  SkillTitle, SkillWrapper, CertiScroll, CertiItem, CertiItemCont, PrevLink, 
-        NextLink, Certilogo, CTitle, CertiLink, Languages, LangItem, TechImageContainer, TechImage, Slider, SliderTrack, Slide } from './SkillSectionEle';
+        NextLink, Certilogo, CTitle, CertiLink, Languages, LangItem, TechImageContainer, TechImage, Slider, SliderTrack, Slide, Column1, Column2 } from './SkillSectionEle';
 import { Certificates } from './Certifications';
 import {MdNavigateNext, MdNavigateBefore} from 'react-icons/md';
 import {FiExternalLink} from 'react-icons/fi';
@@ -13,7 +13,7 @@ import mysql from '../../images/tech/mysql.png';
 import streamlit from '../../images/tech/streamlit.png';
 import axios from '../../images/tech/axios.png';
 
-const SkillSection = ({currSection, active}) => {
+const SkillSection = ({currSection, active, visited}) => {
 
     const [currCerti, setCurrCerti] = useState(1);
 
@@ -39,9 +39,10 @@ const SkillSection = ({currSection, active}) => {
   return (
     <SkillContainer currSection={currSection} active={active}>
     <SkillWrapper>
-    <SkillTitle>Skills.</SkillTitle>
+    <SkillTitle visited={visited} active={active}>Skills.<div className='wrapper'><div className='accent'></div></div></SkillTitle>
         <SkillGrid>
-            <SkillGridItem className='mr'>
+        <Column1>
+            <SkillGridItem className='mr' visited={visited} active={active}>
             <CertiTitle>Languages</CertiTitle>
                 <Languages>
                     <LangItem>HTML<div className='dot'></div></LangItem>
@@ -69,7 +70,9 @@ const SkillSection = ({currSection, active}) => {
                     </SliderTrack>
                 </Slider>
             </SkillGridItem>
-            <CertiGridItem className='ml'>
+            </Column1>
+            <Column2>
+            <CertiGridItem className='ml' visited={visited} active={active}>
                 <CertiTitle className='cimp'>Certificates & Certifications</CertiTitle>
                 <CertiScroll>
                     {Certificates.map(cert => (
@@ -90,7 +93,7 @@ const SkillSection = ({currSection, active}) => {
                 <PrevLink onClick={goPrev}><a className='previous' href={`#c`+currCerti}><MdNavigateBefore /></a></PrevLink>
                     <NextLink onClick={goNext}><a className='next' href={`#c`+currCerti}><MdNavigateNext/></a></NextLink>
             </CertiGridItem> 
-
+</Column2>
         </SkillGrid>
 </SkillWrapper>
     </SkillContainer>
