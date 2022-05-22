@@ -30,7 +30,7 @@ export const projectData = [
         name: 'Placement Portal Web App',
         imgsrc: img3,
         subhead: 'Database Application.',
-        desc: 'A Placement Portal Web application where students can view and apply for jobs and interviews. Companies can create jobs and hire applicants through the portal. Uses sessions and user authentication. MySQL database is used. ',
+        desc: 'A Placement Portal Web application where students can view and apply for jobs and interviews. Companies can create jobs and hire applicants through the portal. Uses sessions and user authentication. MySQL database is used. (Currently not hosted) ',
         link: 'https://github.com/nn-advith/dbsProject',
         tech: ['Express', 'EJS', 'MySQL', 'PassportJS', 'Javascript'],
 
