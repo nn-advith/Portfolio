@@ -64,7 +64,7 @@ export const ColumnWrapper = styled.div`
     flex-direction: column;
     justify-content: right;
     opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -141,7 +141,7 @@ export const ContactForm = styled.form`
     justify-content: space-between;
     align-items: left;
     opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;

@@ -100,51 +100,14 @@ export const SkillTitle = styled.div `
     
     
 `
-export const Column1 = styled.div`
-width: 100%;
-    overflow: hidden;
 
-    grid-area: col1;
-    @media screen and (max-width: 770px){
-        padding-top: 100px;
-    }
-
-    @media screen and (min-width: 770px){
-        padding-top: 200px;
-    }
-
-    @media screen and (min-width: 1100px){
-        padding-top: 0px;
-    }
-
-`
-
-export const Column2 = styled.div`
-width: 100%;
-    overflow: hidden;
-    grid-area: col2;
-    border-left: 2px solid #6702e4;
-
-    @media screen and (max-width: 770px){
-        padding-top: 200px;
-    }
-
-    @media screen and (min-width: 770px){
-        padding-top: 400px;
-    }
-
-    @media screen and (min-width: 1100px){
-        padding-top: 0px;
-    }
-
-`
 
 export const SkillGrid = styled.div`
     width: 100%;
     height: 70%;
-    display: grid;
-    grid-template-areas: 'col1 col2';
-    
+    display: flex;
+  
+
 
     .ml{
         
@@ -178,9 +141,9 @@ export const SkillGrid = styled.div`
         overflow-x : hidden;
         height: 80%;
         padding-bottom: 30px;
-        grid-auto-columns: 1fr 1fr;
+   
         padding-bottom: 1%;
-        grid-template-areas: 'col1' 'col2';
+  
     }
 
     @media screen and (min-width: 770px){
@@ -189,9 +152,7 @@ export const SkillGrid = styled.div`
         overflow-y : scroll;
         overflow-x : hidden;
         height: 80%;
-        grid-auto-columns: 1fr 1fr;
-        grid-template-areas: 'col1' 'col2';
-        padding-bottom: 10%;
+        ${'' /* padding-bottom: 10%; */}
 
     }
 
@@ -200,10 +161,10 @@ export const SkillGrid = styled.div`
         overflow-y : hidden;
         overflow-x : hidden;
         height: 60%;
+
         padding-top: 50px;
         margin-top: 50px;
-        grid-auto-columns: 1fr 1fr;
-        grid-template-areas: 'col1 col2'; 
+        
     }
 `
 
@@ -212,8 +173,8 @@ export const SkillGridItem = styled.div`
     background-color: transparent;
     padding:0px 20px 50px 0px;
     opacity: 0%;
-    overflow: hidden;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -227,7 +188,7 @@ export const SkillGridItem = styled.div`
     }
 
     @media screen and (min-width: 1100px){
-        width: 100%;
+        width: 50%;
         height: 100%;
     }
 
@@ -238,15 +199,14 @@ export const SkillGridItem = styled.div`
 export const CertiGridItem = styled.div`
     position: relative;
     background-color: transparent;
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    ${'' /* justify-content: center; */}
+    justify-content: center;
     padding: 10px 20px;
 
     opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -258,17 +218,20 @@ export const CertiGridItem = styled.div`
     @media screen and (max-width: 770px){
         width: 100%;
         margin-top: 30px;
-        padding: 0px;
+        padding-bottom: 50px;
+        border-left: 2px solid #6702e4;
     }
 
     @media screen and (min-width: 770px){
         width: 100%;
         margin-top: 30px;
-        padding: 0px;
+        padding-bottom: 50px;
+        border-left: 2px solid #6702e4;
     }
 
     @media screen and (min-width: 1100px){
-        width: 100%;
+        width: 50%;
+        height: 100%;
     }
     
 `
@@ -288,13 +251,13 @@ export const CertiTitle = styled.div`
 
 export const CertiScroll = styled.div`
     width: 100%;
-    height: 350px;
+    height: 400px;
     display: grid;
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    margin-bottom: 5%;
+    ${'' /* margin-bottom: 5%; */}
    
 
 `
@@ -302,7 +265,7 @@ export const CertiScroll = styled.div`
 export const CertiItemCont = styled.div`
    
     width: 90%;
-    height: 350px;
+    height: 400px;
     scroll-snap-align: start;
     background: #111;
     margin: 0 20px;
@@ -310,7 +273,7 @@ export const CertiItemCont = styled.div`
 `
 
 export const CertiItem = styled.div`
-    height: 350px;
+    height: 400px;
     display: flex;
     width: 100%;
     flex-direction: column;

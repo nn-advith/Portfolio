@@ -41,7 +41,7 @@ const SkillSection = ({currSection, active, visited}) => {
     <SkillWrapper>
     <SkillTitle visited={visited} active={active}>Skills.<div className='wrapper'><div className='accent'></div></div></SkillTitle>
         <SkillGrid>
-        <Column1>
+        {/* <Column1> */}
             <SkillGridItem className='mr' visited={visited} active={active}>
             <CertiTitle>Languages</CertiTitle>
                 <Languages>
@@ -70,8 +70,7 @@ const SkillSection = ({currSection, active, visited}) => {
                     </SliderTrack>
                 </Slider>
             </SkillGridItem>
-            </Column1>
-            <Column2>
+
             <CertiGridItem className='ml' visited={visited} active={active}>
                 <CertiTitle className='cimp'>Certificates & Certifications</CertiTitle>
                 <CertiScroll>
@@ -93,7 +92,6 @@ const SkillSection = ({currSection, active, visited}) => {
                 <PrevLink onClick={goPrev}><a className='previous' href={`#c`+currCerti}><MdNavigateBefore /></a></PrevLink>
                     <NextLink onClick={goNext}><a className='next' href={`#c`+currCerti}><MdNavigateNext/></a></NextLink>
             </CertiGridItem> 
-</Column2>
         </SkillGrid>
 </SkillWrapper>
     </SkillContainer>

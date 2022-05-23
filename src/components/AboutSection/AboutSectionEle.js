@@ -61,29 +61,29 @@ export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 0px 0 15px;
     grid-area: col1;
-    overflow: hidden;
-    border-right: 1px solid #6702e4;
+
+
+    
 
 `
 export const Column2 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
     grid-area: col2;
-    overflow: hidden;
+
+    
 
 `
 
 export const AboutInfo = styled.div`
-
     padding:5px 20px;
     text-align: right;
     letter-spacing: 0.5px;
-    
     display: flex;
     flex-direction: column;
     justify-content: right;
     opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -93,11 +93,13 @@ export const AboutInfo = styled.div`
         overflow: hidden;
         height: auto;
         text-align: left;
+
     }
     @media screen and (min-width: 770px) {
         overflow: hidden;
         height: auto;
         text-align: left;
+
     }
     @media screen and (min-width: 1100px) {
         overflow-y: scroll;
@@ -246,10 +248,15 @@ export const AboutImgWrap = styled.div`
     display: flex;
     padding-bottom: 40px;
     opacity: 0%;
-    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp)};
+    animation: ${({visited, active}) => (visited[active] === 0 ? popStay: popUp2)};
     animation-delay: ${({visited, active}) => (visited[active] === 0 ? '0s': '1s')};
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    @media screen and (max-width: 770px){
+        justify-content: center;
+        padding-bottom: 0px;
+
+    }
     @media screen and (max-width: 1100px){
         justify-content: center;
         padding-bottom: 50px;
