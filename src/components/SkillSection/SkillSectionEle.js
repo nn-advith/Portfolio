@@ -257,7 +257,7 @@ export const CertiScroll = styled.div`
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    ${'' /* margin-bottom: 5%; */}
+
    
 
 `
@@ -291,8 +291,8 @@ export const NextLink = styled.div`
     transform: rotate(90deg);
 
     @media screen and (max-width: 770px){
-        right: 6%;
-        top: 86%;
+        right: 10%;
+        top: 78%;
     }
 
     .next{
@@ -325,8 +325,8 @@ export const PrevLink = styled.div`
     -webkit-tap-highlight-color: transparent;
 
     @media screen and (max-width: 770px){
-        right: 6%;
-        top: 78%;
+        right: 10%;
+        top: 72%;
     }
 
     .previous{
