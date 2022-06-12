@@ -12,6 +12,7 @@ import mongodb from '../../images/tech/mongodb.png';
 import mysql from '../../images/tech/mysql.png';
 import streamlit from '../../images/tech/streamlit.png';
 import axios from '../../images/tech/axios.png';
+import flask from '../../images/tech/flask.png';
 
 const SkillSection = ({currSection, active, visited}) => {
 
@@ -62,11 +63,12 @@ const SkillSection = ({currSection, active, visited}) => {
                         <Slide><TechImage src={mongodb}/></Slide>
                         <Slide><TechImage src={mysql}/></Slide>
                         <Slide><TechImage src={streamlit}/></Slide>
+                        <Slide><TechImage src={flask}/></Slide>
                         <Slide><TechImage src={react}/></Slide>
                         <Slide><TechImage src={node}/></Slide>
                         <Slide><TechImage src={mongodb}/></Slide>
                         <Slide><TechImage src={mysql}/></Slide>
-                        <Slide><TechImage src={streamlit}/></Slide>
+                        <Slide><TechImage src={flask}/></Slide>
                     </SliderTrack>
                 </Slider>
             </SkillGridItem>
