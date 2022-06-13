@@ -14,7 +14,7 @@ export const fadeIn =  keyframes`
 
 export const scroll = keyframes`
     0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-150px * 5))}
+	100% { transform: translateX(calc(-150px * 6))}
 `
 
 export const popUp = keyframes`

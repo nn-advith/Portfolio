@@ -509,7 +509,7 @@ export const Slider = styled.div`
 export const SliderTrack = styled.div`
     animation: ${scroll} 20s linear infinite;
     display: flex;
-    width: calc(150px * 10);
+    width: calc(150px * 12);
     
 `
 

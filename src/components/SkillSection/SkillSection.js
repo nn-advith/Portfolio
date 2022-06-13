@@ -68,6 +68,7 @@ const SkillSection = ({currSection, active, visited}) => {
                         <Slide><TechImage src={node}/></Slide>
                         <Slide><TechImage src={mongodb}/></Slide>
                         <Slide><TechImage src={mysql}/></Slide>
+                        <Slide><TechImage src={streamlit}/></Slide>
                         <Slide><TechImage src={flask}/></Slide>
                     </SliderTrack>
                 </Slider>
