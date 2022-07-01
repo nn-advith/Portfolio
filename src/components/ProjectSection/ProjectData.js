@@ -3,6 +3,7 @@ import img2 from '../../images/projectImages/bclr.png';
 import img3 from '../../images/projectImages/ppdbs.png';
 import img4 from '../../images/projectImages/notes.png';
 import img5 from '../../images/projectImages/attendance.png';
+import img6 from '../../images/projectImages/detonote.png';
 
 export const projectData = [
     {
@@ -17,6 +18,16 @@ export const projectData = [
     },
     {
         id:'p2',
+        name: 'DetoNote',
+        imgsrc: img6,
+        subhead: 'MERN Stack project',
+        desc: 'A MERN stack application where you can send notes which get deleted automatically after being read. This mini personal project was inspired  from PrivNote.',
+        link: 'https://detonote.netlify.app/',
+        tech: ['MERN', 'React-Router'],
+
+    },
+    {
+        id:'p3',
         name: 'Breast Cancer Classification',
         imgsrc: img2,
         subhead: 'Logistic Regression model.',
@@ -26,7 +37,7 @@ export const projectData = [
 
     },
     {
-        id:'p3',
+        id:'p4',
         name: 'Placement Portal Web App',
         imgsrc: img3,
         subhead: 'Database Application.',
@@ -36,7 +47,7 @@ export const projectData = [
 
     },
     {
-        id:'p4',
+        id:'p5',
         name: 'Google Keep Clone',
         imgsrc: img4,
         subhead: 'MERN stack application',
@@ -46,7 +57,7 @@ export const projectData = [
 
     },
     {
-        id:'p5',
+        id:'p6',
         name: 'Automatic Attendance System',
         imgsrc: img5,
         subhead: 'Face Recognition Project',
@@ -55,4 +66,5 @@ export const projectData = [
         tech: ['Python', 'face_recognition', 'OpenCV', 'PyQt5'],
 
     },
+    
 ]
